@@ -1,0 +1,179 @@
+# Indiana Reed (ijreed)
+# INFO-I427
+# Assignment 3
+
+#Report:
+#I added a visited list and a counter to be used for file naming to the spider initialization. 
+#Also in the initialization I check to see if the specified directory for html files already exists;
+#if not, I create it. When making my parsing function, I ran into a couple issues correctly counting 
+#how many files I had parsed. This was fixed by better placement of my num_page_to_fetch checks and making
+#sure I only request one page at the end of my parse function (I previously had requested in the for loop 
+#looking for links, requesting way too many pages). When I choose a new link, I just use a while loop to 
+#keep picking new links if I picked one I already visited. Finally, for error handling, I wrote my own errback 
+#function to just pick the next link (again skipping visited links). This takes care of dead links, links that 
+#are forbidden by robots.txt, etc.
+#Note: I collaborated with Joel Park for high level ideas about the assignment
+
+
+# -*- coding: utf-8 -*-
+from collections import deque
+import scrapy
+import os
+
+graph = {}
+
+#===========
+# Exceptions
+#===========
+class AlgoNotProvidedException(Exception):
+    pass
+
+class AlgoNotSupportedException(Exception):
+    pass
+
+class NumPageNotProvidedException(Exception):
+    pass
+
+class DestFolderNotProvidedException(Exception):
+    pass
+
+class UrlNotProvidedException(Exception):
+    pass
+
+
+#===========
+# Containers
+#===========
+class Container(deque):
+    ''' This is a class that serves as interface to the Spider '''
+    def add_element(self, ele):
+        ''' Add an element to the contain, always to the right '''
+        return self.append(ele)
+
+    def get_element(self):
+        ''' This is an abstract method '''
+        # One can also implement this using built-in module "abc",
+        #   which stands for Abstract Base Class and produces a
+        #   more meaningful error
+        raise NotImplementedError
+
+class Queue(Container):
+    ''' Queue data structure implemented by deque '''
+    def get_element(self):
+        ''' Pop an element from the left '''
+        return self.popleft()
+
+class Stack(Container):
+    ''' Stack data structure implemented by deque '''
+    def get_element(self):
+        ''' Pop an element from the right '''
+        return self.pop()
+
+
+#=======
+# Spider
+#=======
+class ExampleSpider(scrapy.Spider):
+    name = "example"
+    allowed_domains = []
+    start_urls = (
+        'http://www.example.com/',
+    )
+
+    def __init__(self, algo=None, num=None, directory=None, urls=None,
+            *args, **kwargs):
+        ''' Cutomized constructor that takes command line arguements '''
+        super(self.__class__, self).__init__(*args, **kwargs)
+
+        # check manditory inputs
+        if num is None:
+            raise NumPageNotProvidedException
+        self.num_page_to_fetch = int(num)-1
+
+        if directory is None:
+            raise DestFolderNotProvidedException
+        self.dest_folder = directory
+
+        if urls is None:
+            raise UrlNotProvidedException
+        self.start_urls = urls.split(',')
+
+        # check algorithm choice, and construct container accordingly
+        if algo is None:
+            raise AlgoNotProvidedException
+        elif algo == 'dfs':
+            self.container = Stack()
+        elif algo == 'bfs':
+            self.container = Queue()
+        else:
+            raise AlgoNotSupportedException
+        
+        # added visited list for bfs/dfs
+        self.visited = [urls]
+        # create dest_folder if it doesn't exist already
+        if not os.path.exists(self.dest_folder):
+            os.makedirs(self.dest_folder)
+        # counter for naming html files
+        self.counter = int(num)-1
+        return
+
+
+    def parse(self, response):
+        #self.log(self.visited)
+        #self.log(self.num_page_to_fetch)
+        # name file 1.html, 2.html, etc. by subtracting pages parsed from original number to parse
+        filename = '%s.html' % str(self.counter-self.num_page_to_fetch)
+        # write file with response data
+        with open(self.dest_folder + filename, 'wb') as f:
+            f.write(response.body)
+        # write entry to index.dat
+        with open(self.dest_folder + 'index.dat', 'a') as f2:
+            f2.write(str(self.counter-self.num_page_to_fetch) + ".html " + str(response.url) + "\n")
+        # add current url as key in graph dictionary
+        graph[str(response.url)] = []
+        print graph
+        #self.log('Saved file %s' % filename)
+        # loop through all links on page and add them to the queue/stack
+        for url in response.selector.xpath('//a/@href').extract():
+            #self.log(url)
+            url = response.urljoin(url) #make url absolute
+            if self.num_page_to_fetch > 0:
+                self.container.append(url)
+        # if pages still left to parse
+        if self.num_page_to_fetch > 0:
+            # pull url from stack/queue
+            url = self.container.get_element()
+            #self.log(url)
+            already_visited_link = True
+            # keep pulling new links if already visited
+            while already_visited_link:
+                if url not in self.visited:
+                    already_visited_link = False
+                    # add link to visited and subtract num_pages by 1, visit link
+                    self.visited.append(url)
+                    self.num_page_to_fetch -= 1
+                    # add link to current url key's value in graph dictionary
+                    graph[str(response.url)].append(url)
+                    # parse link
+                    yield scrapy.Request(url, callback=self.parse, errback=self.errback)
+                else:
+                    # pick again if link is visited already
+                    url = self.container.get_element()
+
+    # error handling function, overriding the default
+    # takes care of forbidden links, dead links, etc.
+    def errback(self, failure):
+        # same as before, pull links until you get an unvisited one, visit link
+        if self.num_page_to_fetch > 0:
+            url = self.container.get_element()
+            #self.log(url)
+            already_visited_link = True
+            while already_visited_link:
+                if url not in self.visited:
+                    already_visited_link = False
+                    self.visited.append(url)
+                    # don't subtract from num_pages, since you already did for previous broken link
+                    yield scrapy.Request(url, callback=self.parse, errback=self.errback)
+                else:
+                    url = self.container.get_element()
+        pass
