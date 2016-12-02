@@ -19,6 +19,7 @@
 from collections import deque
 import scrapy
 import os
+import pickle
 
 graph = {}
 
@@ -159,6 +160,10 @@ class ExampleSpider(scrapy.Spider):
                 else:
                     # pick again if link is visited already
                     url = self.container.get_element()
+        else:
+            file_name = "testfile"
+            fileObject = open(file_name, "wb")
+            pickle.dump(graph,fileObject)
 
     # error handling function, overriding the default
     # takes care of forbidden links, dead links, etc.
