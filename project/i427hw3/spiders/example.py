@@ -132,7 +132,7 @@ class ExampleSpider(scrapy.Spider):
             f2.write(str(self.counter-self.num_page_to_fetch) + ".html " + str(response.url) + "\n")
         # add current url as key in graph dictionary
         graph[str(response.url)] = []
-        print graph
+        #print graph
         #self.log('Saved file %s' % filename)
         # loop through all links on page and add them to the queue/stack
         for url in response.selector.xpath('//a/@href').extract():
@@ -161,9 +161,9 @@ class ExampleSpider(scrapy.Spider):
                     # pick again if link is visited already
                     url = self.container.get_element()
         else:
-            file_name = "testfile"
-            fileObject = open(file_name, "wb")
-            pickle.dump(graph,fileObject)
+            webgraph_file = "webgraph"
+            pickle_file = open(webgraph_file, "wb")
+            pickle.dump(graph,pickle_file)
 
     # error handling function, overriding the default
     # takes care of forbidden links, dead links, etc.
