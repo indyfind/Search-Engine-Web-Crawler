@@ -161,8 +161,10 @@ class ExampleSpider(scrapy.Spider):
                     # pick again if link is visited already
                     url = self.container.get_element()
         else:
-            webgraph_file = "webgraph"
-            pickle_file = open(webgraph_file, "wb")
+            # DONE PARSING
+            # save webgraph to pickle file
+            # (to be used in pagerank)
+            pickle_file = open('webgraph', 'wb')
             pickle.dump(graph,pickle_file)
 
     # error handling function, overriding the default

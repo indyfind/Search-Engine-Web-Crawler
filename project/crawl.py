@@ -16,6 +16,12 @@ def main():
     dest_dir = sys.argv[3]
     algo = sys.argv[4]
 
+    # make sure inputs are valid
+    if not (algo == 'bfs' or algo == 'dfs'):
+        sys.exit("Error: Please enter a valid search algorithm ('dfs' or 'bfs')")
+    
+
+
     # call scrapy in cwd with specific arguments
     args = ' '.join(['scrapy', 'crawl', 'example',
             '-a', 'algo=%s' % algo,

@@ -5,7 +5,9 @@ import os
 import sys
 import numpy
 import unittest
+import pickle
 
+# Unit Testing
 class TestMethods(unittest.TestCase):
     def test_pagerank1(self):
         webgraph = {}
@@ -53,6 +55,12 @@ def pagerank(graph):
     for i in range(n):
         answer[keys[i]] = v[i][0]
     return answer
+
+# Load webgraph from pickle file
+web_graph = pickle.load(open('webgraph','rb'))
+
+# Run pagerank on webgraph
+print pagerank(web_graph)
 
 if __name__ == '__main__':
     unittest.main()
