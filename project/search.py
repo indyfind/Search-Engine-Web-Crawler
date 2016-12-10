@@ -26,8 +26,9 @@ def search(search_terms):
     #sort pages by highest scores
     final = sorted(final, key=final.__getitem__)
     final.reverse()
-    #take the top 20 pages (just URL's)
-    final = final[:20]
+    #take the top 100 pages (just URL's)
+    if len(final) > 20:
+        final = final[:20]
     #get page titles from docs.dat
     docs = {}
     docs_data = open('docs.dat', 'r')

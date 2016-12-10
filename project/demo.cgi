@@ -9,6 +9,7 @@ CONTENT = """
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+<body>
 <section class="webdesigntuts-workshop">
   <h1>IGNoogle</h1>
   <form action="demo.cgi" method=POST>
@@ -18,16 +19,16 @@ CONTENT = """
   <h2>Results</h2>
   %s
 </section>
+</body>
 </html>
 
 """
 
 def format_results(results, titles):
-    final = ''
+    final = '<p>'
     for i in range(len(results)):
-        final += '<a id="result%d" href="%s">%s</a><br>\n' % (i, results[i], titles[i])
-    return final
-
+        final += '%d. <a id="result%d" href="%s">%s</a><br>\n' % (i+1, i, results[i], titles[i])
+    return final + '</p>'
 
 def main():
     print "Content-Type: text/html\n\n"

@@ -8,6 +8,12 @@
     width: 100%;
 }
 
+.webdesigntuts-workshop p {
+    background: #151515;
+    text-align: center;
+    color: white;
+}
+
 .webdesigntuts-workshop:before,
 .webdesigntuts-workshop:after {
     content: '';
