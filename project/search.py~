@@ -1,5 +1,0 @@
-import retrieve2
-
-search_terms = ['review']
-
-retrieve2.retrieve(search_terms)

@@ -41,7 +41,7 @@ def retrieve(search_terms):
     search_terms = [term for term in search_terms if term not in stopwords.words('english')]
     search_terms = [stemmer.stem(term) for term in search_terms]
 
-    print search_terms
+    #print search_terms
 
     invindex = {}
     docs = {}
@@ -112,10 +112,15 @@ def retrieve(search_terms):
             tfidf_score += term_score
         #add page and score to dictionary
         tfidf_scores[page] = tfidf_score
-
-    print tfidf_scores
+    #final answer in dictionary form (refactor for final)
+    #key(url):TFIDF score
+    final = {}
+    for page in tfidf_scores:
+        if len(docs[page]) > 2:
+            final[docs[page][2]] = tfidf_scores[page]
+    #print final
     #instead of printing output, save tfidf scores using pickle
-    pickle.dump(tfidf_scores, open('TFIDF', 'w'))
+    pickle.dump(final, open('TFIDF', 'w'))
 
     #sort dictionary by score in descending order and save to list of tuples
     #hits_and_scores = sorted(tfidf_scores.items(), key=lambda x:x[1], reverse = True)
@@ -133,3 +138,5 @@ def retrieve(search_terms):
         #i += 1
     #print "\n", len(docs), "documents searched"
     #print len(hits), "hits found"
+
+#retrieve(['nintendo'])
