@@ -59,8 +59,8 @@ def pagerank(graph):
 # Load webgraph from pickle file
 web_graph = pickle.load(open('webgraph','rb'))
 
-# Run pagerank on webgraph
-print pagerank(web_graph)
+# Save pageranks using pickle
+pickle.dump(pagerank(web_graph), open('pageranks', 'w'))
 
 if __name__ == '__main__':
     unittest.main()

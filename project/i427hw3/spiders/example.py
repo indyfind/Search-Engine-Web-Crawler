@@ -134,14 +134,17 @@ class ExampleSpider(scrapy.Spider):
         graph[str(response.url)] = []
         #print graph
         #self.log('Saved file %s' % filename)
-        # loop through all links on page and add them to the queue/stack
-        for url in response.selector.xpath('//a/@href').extract():
-            #self.log(url)
-            url = response.urljoin(url) #make url absolute
-            if self.num_page_to_fetch > 0:
-                # add link to current url key's value in graph dictionary
-                graph[str(response.url)].append(url)
-                self.container.append(url)
+        try:
+            # loop through all links on page and add them to the queue/stack
+            for url in response.selector.xpath('//a/@href').extract():
+                #self.log(url)
+                url = response.urljoin(url) #make url absolute
+                if self.num_page_to_fetch > 0:
+                    # add link to current url key's value in graph dictionary
+                    graph[str(response.url)].append(url)
+                    self.container.append(url)
+        except:
+            pass
         # if pages still left to parse
         if self.num_page_to_fetch > 0:
             # pull url from stack/queue
@@ -156,7 +159,10 @@ class ExampleSpider(scrapy.Spider):
                     self.visited.append(url)
                     self.num_page_to_fetch -= 1
                     # parse link
-                    yield scrapy.Request(url, callback=self.parse, errback=self.errback)
+                    try:
+                        yield scrapy.Request(url, callback=self.parse, errback=self.errback)
+                    except:
+                        already_visited_link = True
                 else:
                     # pick again if link is visited already
                     url = self.container.get_element()

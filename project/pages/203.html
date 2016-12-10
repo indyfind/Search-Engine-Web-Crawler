@@ -1,0 +1,168 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML> 
+
+<html>
+<head>
+
+
+
+
+<base href="https://c-5544-20150317-www-ziffdavis-com.i.icims.com" /> 
+
+
+
+
+<!--END ICIMS PREHEADER--></head>
+<body style="margin:0px;padding:0px;background-color:#ECECEC;">
+
+
+
+	<table width="90%" cellpadding="0" cellspacing="0" border="0" style="" align="center">
+
+		<tr>
+
+			<td style="padding:15px;background-color:#000000;border-bottom:3px solid #F01516;"><img src="/images/zdHeaderLogo.png" border="0" />
+
+
+		</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="padding:15px;background-color:#fff;border:1px solid #dae5e7;">
+			
+			
+			<!--BEGIN ICIMS-->
+<script type="text/javascript" src="https://cdn07.icims.com/a/images.icims.com/content/platform_102.1.161129.95338/script/lib/domreplacement/domReplacement.js"></script>
+<script type="text/javascript" src="https://cdn07.icims.com/a/images.icims.com/content/platform_102.1.161129.95338/script/common/icims.js"></script>
+<script type="text/javascript" src="https://cdn07.icims.com/a/images.icims.com/content/platform_102.1.161129.95338/script/portal/utils.js"></script>
+<script type="text/javascript">var useAutoScrolling = false;</script>
+<!--[if lte IE 8]>
+<script type="text/javascript">useAutoScrolling = true;</script>
+<![endif]-->
+<script type="text/javascript">
+
+if (window.addEventListener) {
+window.addEventListener('message', icims_handlePostMessage, false);
+} else if (window.attachEvent) {
+window.attachEvent('onmessage', icims_handlePostMessage);
+}
+function icims_handlePostMessage(event) {
+// If this is not a message from an icims domain, ignore it.
+if (event.origin.indexOf('icims.com', event.origin.length - 9) == -1) return;
+var data = null;
+try {
+data = ICIMS.jsonDecode(event.data);
+} catch(e) {}
+if (data == null && event.data != null) data = event.data;
+try {
+if ('height' in data) {
+if (!isNaN(data['height'])) {
+document.getElementById('icims_content_iframe').height = parseInt(data['height']) + 60;
+}
+} else if ('x' in data && 'y' in data) {
+if (!isNaN(data['x']) && !isNaN(data['y'])) {
+top.scrollTo(parseInt(data['x']), parseInt(data['y']));
+}
+}
+} catch (e) {}
+}
+function getCookie(name) {
+var match = document.cookie.match(name + '=(.*?)(;|$)');
+if (match) return unescape(match[1]);
+else return "";
+}
+function updateUrl(url) {
+try {
+history.replaceState({}, '', url);
+} catch (e) {}
+}
+icimsAddOnload(function() {
+var icimsFrame = document.createElement('iframe');
+var iFrameHeight = 500;
+icimsFrame.id = 'icims_content_iframe';
+icimsFrame.name = 'icims_content_iframe';
+icimsFrame.src = 'https:\/\/careers-ziffdavis.icims.com\/jobs\/search?ss=1&searchCompany=8&in_iframe=1';
+icimsFrame.setAttribute('width', '100%');
+
+
+iFrameHeight = 500;
+
+icimsFrame.setAttribute('height', iFrameHeight);
+
+if (!useAutoScrolling && window.postMessage) {
+icimsFrame.setAttribute('scrolling', 'no');
+} else {
+icimsFrame.setAttribute('scrolling', 'auto');
+}
+icimsFrame.setAttribute('title', 'iCIMS Content iFrame');
+icimsFrame.setAttribute('marginwidth', '0');
+icimsFrame.setAttribute('marginheight', '0');
+icimsFrame.setAttribute('frameborder', '0');
+icimsFrame.onload=function() {
+try {
+window.parent.parent.scrollTo(0,0);
+} catch (e) {}
+};
+document.getElementById('icims_iframe_span').appendChild(icimsFrame);
+try {
+var height = getCookie('cookie_icims_iframe_content_height');
+if (height > 0) style.height = height + 'px';
+} catch(e) {}
+document.getElementById('icims_content_iframe').onreadystatechange = function() {
+try{
+if ('interactive' == this.readyState) {
+window.scroll(1,1);
+}
+} catch(e) {}
+};
+try {
+var height = 0;
+if (navigator.userAgent.indexOf("Firefox")!=-1) height = document.body.offsetHeight + 16;
+else height = document.body.scrollHeight;
+document.cookie="cookie_icims_iframe_content_height="+height+"; path=/;";
+} catch(e) {}
+});
+</script>
+<span id="icims_iframe_span">
+<noscript>
+<iframe src="https://careers-ziffdavis.icims.com/jobs/search?ss=1&amp;searchCompany=8&amp;in_iframe=1" id="icims_content_iframe" name="icims_content_iframe" title="iCIMS Content iFrame" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" width="100%" height="500">Your browser does not support inline frames or is currently configured not to display inline frames. Content can be viewed at the actual source page: _IFRAME_SRC_</iframe>
+</noscript>
+</span>
+<!--END ICIMS-->
+			
+			 
+			</td>
+
+		</tr>
+
+	</table>
+
+</body></html>

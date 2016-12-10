@@ -1,0 +1,2138 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head id="m_Head1"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"b6c1cea126","applicationID":"13471269","transactionName":"NQRUMENQC0sAVUdYDgxOdzdhHgFdB1dGXRVMAEUUSQ==","queueTime":0,"applicationTime":506,"ttGuid":"73439E411696CE50","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script><meta name="viewport" content="width=device-width,initial-scale=1" /><title>
+	IT Communities - Share Knowledge at Toolbox.com
+</title><link rel="shortcut icon" href="http://images.ittoolbox.com/favicon.ico" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script><link rel="Stylesheet" type="text/css" href="http://cdn.toolbox.com/build_2996/rds/master.css" /><link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css" /><link id="m_lnkLayoutCoreCss" rel="Stylesheet" type="text/css" href="http://cdn.toolbox.com/build_2996/rds/layout-core.css" /><link id="m_lnkJqueryMMenuCss" rel="Stylesheet" type="text/css" href="http://cdn.toolbox.com/build_2996/rds/jquery.mmenu.all.css" /><link id="m_lnkJqueryOverrideCss" rel="Stylesheet" type="text/css" href="http://cdn.toolbox.com/build_2996/rds/jquery-overrides.css" /><script type="text/javascript">
+var div1, div2, div3;
+div1 = 'div-gpt-ad-701406910-0'; 
+div2 = 'div-gpt-ad-701406910-1';  
+div3 = '%%DIV3%%';  
+var prebid_dt= [
+   {
+      "sizes":[[728, 90]],
+      "code":div1, 
+      "bids":
+      [
+         {"bidder":"appnexus", "params":{"placementId":"6909393"}},
+         {"bidder":"rubiconLite","params":{"accountId":"11576","siteId":"105614","zoneId":"496208","keywords":["toolbox.com"],"inventory":{"site":"toolbox.com","pos":"top","adunit":""}}},
+         {"bidder": 'pulsepoint',params: {cf: '300X250', cp: 560029, ct: 464899}},
+         {"bidder": "aol", "params": { "placement":3944586, "network": "9513.1", "sizeId":225 } },
+         {"bidder": "indexExchange", "params": { "id":1, "siteID":184891}}
+      ]
+   },
+   {
+      "sizes":[[300,250], [300,600]],
+      "code":div2,
+      "bids":
+      [
+         {"bidder":"appnexus","params":{"placementId":"6909393"}},
+         {"bidder":"rubiconLite","params":{"accountId":"11576","siteId":"105614","zoneId":"496208","keywords":["toolbox.com"],"inventory":{"site":"toolbox.com","pos":"top","adunit":""}}},
+         {"bidder": 'pulsepoint', params: {cf: '300X250', cp: 560029, ct: 464899}},
+         {"bidder": "aol", "params": { "placement":4334446, "network": "9513.1" } },
+         {"bidder": "indexExchange", "params": { "id":2, "siteID":184892}}
+      ]
+   },
+   {
+      "sizes":[[300,250], [300,600]],
+      "code":div3,
+      "bids":
+      [
+         {"bidder":"appnexus","params":{"placementId":"6909394"}},
+         {"bidder":"rubiconLite","params":{"accountId":"11576","siteId":"105614","zoneId":"496208","keywords":["toolbox.com"],"inventory":{"site":"toolbox.com","pos":"bottom","adunit":"homepagedoor_btf"}}},
+         {"bidder": 'pulsepoint', params: {cf: '300X250', cp: 560029, ct: 464899}},
+         {"bidder": "aol", "params": { "placement":4334446, "network": "9513.1" } },
+         {"bidder": "indexExchange", "params": { "id":3, "siteID":184893}}
+      ]
+   }
+];
+</script>
+<script type="text/javascript">
+    var PREBID_TIMEOUT = PREBID_TIMEOUT || 600;
+    var USE_PREBID = USE_PREBID || true;
+
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+        
+    function initAdserver() {
+        if (typeof pbjs !== 'undefined' &&  pbjs.initAdserverSet) return;
+        //load GPT library here
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+        '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+        
+        if (typeof pbjs !== 'undefined') {
+            pbjs.initAdserverSet = true;
+        }
+    };
+
+    if (USE_PREBID) {
+        setTimeout(initAdserver, PREBID_TIMEOUT);
+
+        var AdCount = 2;
+      
+        var pb_adUnits = prebid_dt.slice(0, AdCount);  // prebid_dt contains the json ad units for prebid.
+        var pbjs = pbjs || {};
+        pbjs.que = pbjs.que || [];
+
+        var pbjsEl = document.createElement("script"); pbjsEl.type = "text/javascript";
+        pbjsEl.async = true; var isHttps = 'https:' === document.location.protocol;
+        pbjsEl.src = (isHttps ? "https://" : "http://") + "zdstatic.toolbox.com/pb/pbl.min.js";
+        var pbjsTargetEl = document.getElementsByTagName("head")[0];
+        pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
+
+        pbjs.que.push(function() {
+            pbjs.addAdUnits(pb_adUnits);
+            pbjs.requestBids({
+                bidsBackHandler: function(bidResponses) {
+                    initAdserver();
+                    // remove this comment from production
+                    // call coreDMP with every bid returned -- both winners and losers.  
+                    // "bsid" is a guid that is generated so we know all the bids that came back in the same request.
+                    try {
+                        for (var bidadslot  in bidResponses) {
+                            var bsid = function b(a){ return a?(a^Math.random()*16>>a/4).toString(16):([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,b)}(); //guid generator
+                            if (bidResponses.hasOwnProperty(bidadslot)) {
+                                for (var i=0;i < bidResponses[bidadslot].bids.length;i++) {
+                                  try {
+                                    var b = bidResponses[bidadslot].bids[i];
+                                    var s = new Image(1,1);
+                                    var size="NA";
+                                    var hb_pb=0;
+                                    if (b.cpm != 0) {  // yes bid
+                                        hb_pb = b.adserverTargeting.hb_pb;
+                                        size = b.size;
+                                    }
+                                    s.src = "//zdbb.net/l/EBd3N5GSEeWA3CIAC7Ppng?bidder=" + b.bidderCode + "&provider=prebid&site=toolbox.com&cpm=" + b.cpm + "&bsid="+ bsid + "&bid=" + hb_pb+ "&adid=" + b.adId + "&adunit=" + b.adUnitCode + "&size=" + size + "&ttr=" + b.timeToRespond +"&status=" + encodeURIComponent(b.statusMessage);
+                                    //console.log(s.src);
+                                  } catch(err) { }
+                                }
+                             }
+                        }
+                    } catch(err) {  console.log('prebidlog err');}
+                },
+            })
+
+        });
+
+        pbjs.bidderSettings = {
+            standard: {
+                alwaysUseBid: false,
+                adserverTargeting: [{
+                    key: "hb_bidder",
+                    val: function(bidResponse) {
+                        return bidResponse.bidderCode;
+                    }
+                }, {
+                    key: "hb_adid",
+                    val: function(bidResponse) {
+                        return bidResponse.adId;
+                    }
+                }, { 
+                    key: "hb_pb",
+                    val: function(bidResponse) {
+                             if (bidResponse.cpm > 200) { //10$
+                                return (Math.floor(Math.min(parseInt(bidResponse.cpm), 500) / 10) * 10).toFixed(2);
+                              } else
+                              if (bidResponse.cpm > 40) { //1$
+                                return (Math.floor(bidResponse.cpm)).toFixed(2);
+                              } else
+                              if (bidResponse.cpm > 30) { // 10c
+                                return (Math.floor(bidResponse.cpm * 10) / 10).toFixed(2);
+                              }
+                              return bidResponse.cpm.toFixed(2); 
+                          }
+                }, {
+                    key: "hb_size",
+                    val: function(bidResponse) {
+                        return bidResponse.size;
+                    }
+                }, {
+                    key: "hb_cpm",
+                    val: function(bidResponse) {
+                        return bidResponse.cpm;
+                    }
+                },{
+                     key: "hb_dealid",
+                     val: function(bidResponse) { return (typeof bidResponse.dealId === 'undefined' ? "0" : bidResponse.dealId); }
+                  },
+               ]
+            },
+                 aol: {
+            bidCpmAdjustment : function(bidCpm) {
+                return bidCpm * .88;
+                 }
+         }
+        } 
+    } else {
+        initAdserver();
+    }
+</script>
+
+
+  <script src="http://cdn.static.zdbb.net/js/zd-email.js"></script>
+
+                                            <!-- Start BounceX tag. Deploy at the beginning of document head. -->
+                                                <script>
+                                                    (function (d) {
+                                                        var e = d.createElement('script');
+                                                        e.src = d.location.protocol + '//bounceexchange.com/tag/1336/i.js';
+                                                        e.async = true;
+                                                        d.getElementsByTagName("head")[0].appendChild(e);
+                                                    } (document));
+                                                </script>
+                                                <!-- End BounceX Tag--><script type="text/javascript" id="zdtblwdjs" src="//cdn.ziffstatic.com/jst/tblwd_b.js" async="async"></script>
+<script type= "text/javascript" src="//cdn.ziffstatic.com/js/zddmp/1.1/zddmp.min.js"> </script>
+<script type="text/javascript" src="//static.ziffdavis.com/jst/zdsticky.js" async="async"></script>
+<script type="text/javascript" src="//cdn.ziffstatic.com/jst/zdvtools.min.js"></script>  
+<script type="text/javascript" src="//cdn.ziffstatic.com/js/zdrefresher/1.3.2/zdrefresher.min.js"></script>  
+<script async="async" data-client-id="kpwbBOFeVRnEVFB" type="text/javascript" src="//d3ujids68p6xmq.cloudfront.net/abw.js"></script> <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-45137848-1']);
+  _gaq.push(['_setDomainName', 'toolbox.com']);
+  _gaq.push(['_setCustomVar', 1,'Community','Toolbox for IT',3]);
+  _gaq.push(['_setCustomVar', 2,'SubCommunity','IT',3]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+		'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+  })();
+ </script><meta name="zdid" content="0x3AA72C85" /><script type="text/javascript">
+googletag.cmd.push(function () {
+	googletag.defineSlot("/4585/zd.toolbox/Homepage_Door", [[728, 90], [970, 250]], "div-gpt-ad-701406910-0").addService(googletag.pubads()).setTargeting("pos", ["top"]).setTargeting("OOF", document.hasFocus() ? "false" : "true").setTargeting("zcp",__ZDDMP.PageCorrelator()).setTargeting("zc",__ZDDMP.NewCorrelator()).setCollapseEmptyDiv(true);
+	googletag.defineSlot("/4585/zd.toolbox/Homepage_Door", [[300, 250], [300, 600]], "div-gpt-ad-701406910-1").addService(googletag.pubads()).setTargeting("pos", ["top"]).setTargeting("OOF", document.hasFocus() ? "false" : "true").setTargeting("zcp",__ZDDMP.PageCorrelator()).setTargeting("zc",__ZDDMP.NewCorrelator()).setCollapseEmptyDiv(true);
+	googletag.pubads().setTargeting("zdid", "0x3AA72C85");
+	googletag.pubads().setTargeting("ref", "toolbox.com");
+	googletag.pubads().setTargeting("cmn", "zd");
+	googletag.pubads().setTargeting("zdtopic", [""]);
+	googletag.pubads().setTargeting('s', __ZDDMP.GetUSegs());
+	googletag.pubads().setTargeting('p', __ZDDMP.GetPSegs());
+	googletag.pubads().setTargeting('zdbb', __ZDDMP.GetZDBB());
+	googletag.pubads().setTargeting("rfr", "false");
+	googletag.pubads().enableSingleRequest();
+	googletag.pubads().collapseEmptyDivs();
+
+                if ((typeof pbjs !== "undefined") && pbjs.libLoaded) {
+                    pbjs.setTargetingForGPTAsync();
+                }	googletag.enableServices();
+});
+</script></head>
+<body> 
+    <div id="container">
+ <script type="text/javascript">	
+    var isCorpSite = false;
+    var signinURL = 'http://login.toolbox.com/';            
+    var vertBaseURL = 'http://it.toolbox.com/';
+    var CDNImageURL = 'http://cdn.toolbox.com/build_2996/';
+    var CurrentVerticalName = 'Toolbox for IT';
+    var siteCookieDomain = '.toolbox.com';
+
+    function setCookie(name, value, exdays) {  var exdate = new Date();  exdate.setTime(exdate.getTime());  if (exdays) {  exdays = exdays * 1000 * 60 * 60 * 24;  }  var expires_date = new Date(exdate.getTime() + (exdays));   var domain = "";  if ( siteCookieDomain )  domain = ";domain=" + siteCookieDomain;   document.cookie = name + "=" + escape(value) + ((exdays) ? ";expires=" + expires_date.toGMTString() : "") + ";path=/" + domain;  }   
+    function getCookie(check_name) {  var ca = document.cookie.split(";");  var tc = '';  var cn = '';  var cf = false;   for (var i = 0; i < ca.length; i++) {  tc = ca[i].substr(0, ca[i].indexOf("="));  cn = ca[i].substr(ca[i].indexOf("=") + 1);  tc = tc.replace(/^\s+|\s+$/g, "");  if (tc == check_name) {  cf = true;  return unescape(cn);  break;  }  }  if (!cf) {  return null;  } }
+    </script>
+<div id="lightbox-panel"></div>
+
+
+
+<form name="aspnetForm" method="post" action="/" id="aspnetForm">
+<div>
+
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+    $(document).ready(function () {
+        $('.tile').hover(
+
+        function () {
+            $('.tileType', $(this)).show();
+        }, function () {
+            $('.tileType', $(this)).hide();
+        });
+        $('.tile-groups').hover(
+	
+            function () {
+	            $('.GrpMsgTile', $(this)).show();
+	        }, function () {
+	            $('.GrpMsgTile', $(this)).hide();
+	        });
+        });
+//]]>
+</script>
+<script type="text/javascript">function Toggle(tab){tab=$(tab);if(tab.hasClass("tabbednav-up")) return;if(tab.hasClass("tabbednav-down"))tab.removeClass("tabbednav-down");tab.parent().children("div.tabbednav-up").removeClass("tabbednav-up").addClass("tabbednav-down");tab.addClass("tabbednav-up");var tabContainer=$("#"+tab.attr("tabcontainerid"));tabContainer.siblings("div").hide();tabContainer.show();tab.siblings("input[type|=hidden]").val(tab.attr("tabindex"))}function LoadTabContainer(tab,code){var tabContainer=$("#"+$(tab).attr("tabcontainerid"));tabContainer.children("[loader|=true]").show();var html=eval(code);tabContainer.html(html);$(tab).attr("onclick","");$(tab).bind("click",function(){Toggle(tab)});tabContainer.children("[loader|=true]").hide()}</script>
+<div id="header" style="display:none">
+<div id="m_logoandads" class="header-normal">
+
+<a href="http://www.toolbox.com/" class="header-logolink"></a>
+</div>
+</div>
+
+
+
+
+    
+    <div id="zd-header">
+        <div id="zd-headerinner">
+            <a href="http://www.ziffdavis.com/" class="ZDlogo"></a>
+        </div>
+    </div>
+   
+    <div class="dynaheader-logobar">
+        <div class="dynaheader-logoinner">
+            <div class="dynaheader-logoleft">
+                <a href="http://it.toolbox.com/"><img src="http://cdn.toolbox.com/build_2996/rds/dynamicheader/dynaheader-sprite.png" border=0 /></a>
+            </div>
+            <div class="dynaheader-logoright">
+                <table border=0 width=100% cellpadding=0 cellspacing=0>
+                    <tr>
+                        <td align=center width=500>
+                            
+
+<script type="text/javascript">
+    var _action = 'http://it.toolbox.com/home/search/';
+    var _mainArgumentName = 'ss';
+    var _additionalArgumentName = null;
+    var _additionalArgumentName = '';
+    var _additionalArgumentValue = '';
+</script>
+<div id="dynaheader-searchbox">
+    <input id="query" type="text" defaultButton="btnGlobalSearch" class="dynaheader-search" watermark="Search Toolbox.com" />            
+    <input id="btnGlobalSearch" class="dynaheader-searchexbutton" type="button" onclick="GlobalSearch()" />
+</div>
+
+
+                        </td>
+                        <td valign=middle align=right>                
+                            
+                                <div class="dynaheader-signinbox">
+                                    <div class="dynaheader-triggersignin dynaheader-header" style="display:inline">Log In</div>
+                                        <div id="m_GN_signin_form" class="dynaheader-panel dn-panel dynaheader-signingpanel">
+                                            <div id="signin_message"></div>
+                                            <div style="padding:10px">
+                                                E-mail or User ID<br />
+                                                <input type="text" style="width:180px; height:20px" id="signin_form_username" name="u" tabindex="900" />
+                                            </div>
+                                            <div style="padding:10px">
+                                                Password<br />
+                                                <input type="password" style="width:180px; height:20px" id="signin_form_password" name="p" tabindex="901"/>
+                                            </div>
+                                            <div style="padding:10px">
+                                                <input type="checkbox" name="keepMeSignedIn" id="kmsiCB" value="true" tabindex="903" checked />&nbsp;
+                                                <span style="font-family:'Open Sans'; color:white">Keep me signed in</span>
+                                                
+                                            </div>
+                                            <div style="padding:10px">
+                                                <input type="button" id="btnSignIn" value="" tabindex="905" class="signinbuttonbig" />
+                                            </div>
+                                            <a id="m_GN_ltbSignin_RecoverPassword" href="http://it.toolbox.com/home/recover-password">Recover Password</a>
+                                        </div>
+                                        <a href="http://it.toolbox.com//home/register" class="dynaheader-header" style="white-space:nowrap; display:inline" hpx="createaccount">Create an Account</a>
+                                    
+                                </div>
+                               
+                            
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+        </div>
+
+     
+    <div class="dynaheader-navbar">
+        <div class="dynaheader-navinner">
+        
+            <div class="dynaheader-navleft" style="width:54%; float:left;">
+                <div style="float: left;">
+                <div class="dynaheader-vertrule"></div>
+                <a href="http://it.toolbox.com/" class="dynaheader-home"></a>
+                <div class="dynaheader-vertrule"></div>
+                <a href="http://it.toolbox.com/blogs/" class="dynaheader-tabbutton">Blogs</a>
+                <div class="dynaheader-vertrule"></div>
+                <div class="dynaheader-trigger dynaheader-tabbuttondropdown">Discussions</div>
+                <div id="dynaheader-discusspanel" class="dn-panel dynaheader-panel">
+                    <div id="animationholder" style="width:2000px; height:290px">
+                        <div id="topiclist" class="dynaheader-bucket">
+                            <div class="dynaheader-panelhed">CHOOSE A TOPIC</div>
+							
+									<div class="dynaheader-dispanel">
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 17)'>Business Intelligence</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 19)'>C Languages</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 78)'>Cloud Computing</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 75)'>Communications Technology</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 1)'>CRM</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 76)'>Data Center</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 15)'>Data Warehouse</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 25)'>Database</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 28)'>Emerging Technology and Trends</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 2)'>Enterprise Architecture and EAI</a>
+									</div><div class='dynaheader-panelvertrule' style='height:270px; margin-top:0px; '></div><div class='dynaheader-dispanel' style='padding-left:15px'>																
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 4)'>ERP</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 31)'>Hardware</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 32)'>IT Management and Strategy</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 18)'>Java</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 13)'>Knowledge Management</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 12)'>Linux</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 10)'>Networking</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 9)'>Oracle</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 8)'>PeopleSoft</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 29)'>Project and Portfolio Management</a>
+									</div><div class='dynaheader-panelvertrule' style='height:270px; margin-top:0px; '></div><div class='dynaheader-dispanel' style='padding-left:15px'>																
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 6)'>SAP</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 7)'>SCM</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 24)'>Security</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 23)'>Siebel</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 22)'>Storage</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 14)'>UNIX</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 21)'>Visual Basic</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 11)'>Web Design and Development</a>
+																									
+								
+									<a class="dynaheader-dirtopics" href='javascript:discussionPaneHandler("showGroups", 26)'>Windows</a>
+																									
+								
+									</div>
+								
+                        </div> 
+                        <div id="groupslistbox" class="dynaheader-bucket">
+                            <a class="dynaheader-backlink" href="javascript:discussionPaneHandler('showTopics')">< Back</a>
+                            <a id="dynaheader-backbutton" href="javascript:discussionPaneHandler('showTopics')"></a>
+                            <div class="dynaheader-panelhed">
+                                CHOOSE A DISCUSSION GROUP
+                            </div>
+                            <div id="groupslist" style="height:250px"></div>
+                        </div>
+                    </div> 
+                </div>    
+                <div class="dynaheader-vertrule"></div>
+                <a href="http://it.toolbox.com/companies/white-papers/" class="dynaheader-tabbutton">Research</a>
+                <div class="dynaheader-vertrule"></div>
+                <div class="dynaheader-trigger dynaheader-tabbuttondropdown">Directory</div>
+                <div id="dynaheader-directorypanel" class="dn-panel dynaheader-panel">
+                    <div class="dynaheader-dirpanel">
+                        <a href="http://it.toolbox.com/topics" class="dynaheader-panelhed">TOPICS</a>
+                        <div class="dn-dirTopics">
+						
+                            <a class="dynaheader-dirtopics" href="http://database.ittoolbox.com/">Database</a>
+                            <a class="dynaheader-dirtopics" href="http://hardware.ittoolbox.com/">Hardware</a>
+                            <a class="dynaheader-dirtopics" href="http://networking.ittoolbox.com/">Networking</a>
+                            <a class="dynaheader-dirtopics" href="http://sap.ittoolbox.com/">SAP</a>
+                            <a class="dynaheader-dirtopics" href="http://security.ittoolbox.com/">Security</a>
+                            <a class="dynaheader-dirtopics" href="http://webdesign.ittoolbox.com/">Web Design</a>
+						
+                        </div>
+                    </div>
+                    <div class="dynaheader-panelvertrule"></div>
+                    <div class="dynaheader-dirpanel">
+                        <a href="http://it.toolbox.com/people" class="dynaheader-panelhed">MEMBERS</a>
+                        <div id="memberSlideDisplay"></div>
+                        <div id="memberSlideHolder" style="display:none">
+							<div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/6/5/7/s_2192756.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/paul_pedant/' class="dynaheader-dirtopics memberLinkbox">Paul_Pedant </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/5/5/1/s_1368155.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/dacree/' class="dynaheader-dirtopics memberLinkbox">DACREE </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/4/2/9/s_2510924.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/markdevries/' class="dynaheader-dirtopics memberLinkbox">MarkDeVries </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/2/6/1/s_4038162.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/voip_news/' class="dynaheader-dirtopics memberLinkbox">VoIP_News </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/2/6/7/s_3370762.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/insidecrm/' class="dynaheader-dirtopics memberLinkbox">Inside-CRM </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/0/4/1/s_393140.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/chrisdaypinkyltd/' class="dynaheader-dirtopics memberLinkbox">Chris_Day </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/2/6/1/s_4271162.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/macprotx/' class="dynaheader-dirtopics memberLinkbox">MacProTX </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/3/2/1/s_2253123.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/i_am_the_dragon/' class="dynaheader-dirtopics memberLinkbox">I_am_the_dragon </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/0/1/2/s_4152210.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/inside_erp/' class="dynaheader-dirtopics memberLinkbox">Inside-ERP </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/3/0/3/s_1124303.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/mikemj/' class="dynaheader-dirtopics memberLinkbox">Michael Meyers-Jouan </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/1/3/4/s_638431.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/terrycurran999/' class="dynaheader-dirtopics memberLinkbox">TerryCurran </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/3/9/0/s_5319093.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/maxwellarnold/' class="dynaheader-dirtopics memberLinkbox">maxwellarnold </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/6/3/9/s_799936.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/locutus/' class="dynaheader-dirtopics memberLinkbox">Locutus </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/6/1/0/s_1135016.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/andrew_s_baker/' class="dynaheader-dirtopics memberLinkbox">Andrew.S.Baker </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/7/9/2/s_450297.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/craigwb/' class="dynaheader-dirtopics memberLinkbox">Craig Borysowich </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/3/8/3/s_29383.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/ganotedp/' class="dynaheader-dirtopics memberLinkbox">DukeGanote </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/8/2/0/s_1191028.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/dennisstevenson/' class="dynaheader-dirtopics memberLinkbox">Dennis Stevenson </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/6/3/1/s_5293136.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/hogardy/' class="dynaheader-dirtopics memberLinkbox">Hogardy </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/5/4/6/s_2230645.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/ramnath_awate/' class="dynaheader-dirtopics memberLinkbox">Ramnath.Awate </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/1/6/6/s_101661.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/africanoracle/' class="dynaheader-dirtopics memberLinkbox">Clinton Jones </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/3/0/8/s_2032803.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/castertroy/' class="dynaheader-dirtopics memberLinkbox">AbhaiTripathi </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/7/4/6/s_395647.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/blrvenkat/' class="dynaheader-dirtopics memberLinkbox">blrvenkat </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/1/4/4/s_618441.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/iqbalyk/' class="dynaheader-dirtopics memberLinkbox">Iqbalyk </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/2/7/2/s_1441272.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/locklyon/' class="dynaheader-dirtopics memberLinkbox">LockLyon </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/4/0/0/s_4031004.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/it-management/' class="dynaheader-dirtopics memberLinkbox">IT-Management </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/3/8/0/s_381083.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/taliesinuk/' class="dynaheader-dirtopics memberLinkbox">RichardChan </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/1/5/0/s_1851051.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/iudithm/' class="dynaheader-dirtopics memberLinkbox">iudithm </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/7/4/0/s_1042047.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/adrian_grigoriu/' class="dynaheader-dirtopics memberLinkbox">Adrian_Grigoriu </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/7/3/6/s_1057637.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/mlindquist/' class="dynaheader-dirtopics memberLinkbox">mlindquist </a></div></div></div><div class="memberSlide"><div class="member"><div class="floatleft"><img src='https://userimages.ittoolbox.com/user/6/3/9/s_6498936.jpg' class="post-pic"></div><div class="floatleft" style="padding-left:10px"><a href='http://it.toolbox.com/people/cogknowsami/' class="dynaheader-dirtopics memberLinkbox">knowscognosdoi </a></div></div></div>
+                        </div>
+                    </div>
+                    <div class="dynaheader-panelvertrule"></div>
+                    <div class="dynaheader-dirpanel">
+                        <a href="http://it.toolbox.com/companies" class="dynaheader-panelhed">COMPANIES</a>
+                        
+                                <div class="member">         
+                                    <div class="floatleft"><a href="http://it.toolbox.com/companies/webroot"><div class="userimage-defaultbadge" lazysource="https://userimages.ittoolbox.com/vendor/5/7/5/b_2706575.jpg"></div></a>
+</div>
+                                    <div class="floatleft">
+<a href="http://it.toolbox.com/companies/webroot" class="dynaheader-dircomps">Webroot</a></div>
+                                    <div class="clear"></div>                   
+                                </div>
+                            
+                                <div class="member">         
+                                    <div class="floatleft"><a href="http://it.toolbox.com/companies/okta"><div class="userimage-defaultbadge" lazysource="https://userimages.ittoolbox.com/vendor/1/1/8/b_2699811.jpg"></div></a>
+</div>
+                                    <div class="floatleft">
+<a href="http://it.toolbox.com/companies/okta" class="dynaheader-dircomps">Okta</a></div>
+                                    <div class="clear"></div>                   
+                                </div>
+                            
+                                <div class="member">         
+                                    <div class="floatleft"><a href="http://it.toolbox.com/companies/ManageEngine"><div class="userimage-defaultbadge" lazysource="https://userimages.ittoolbox.com/vendor/9/1/8/b_2280819.jpg"></div></a>
+</div>
+                                    <div class="floatleft">
+<a href="http://it.toolbox.com/companies/ManageEngine" class="dynaheader-dircomps">ZOHO Corporation</a></div>
+                                    <div class="clear"></div>                   
+                                </div>
+                            
+                                <div class="member">         
+                                    <div class="floatleft"><a href="http://it.toolbox.com/companies/imation"><div class="userimage-defaultbadge" lazysource="https://userimages.ittoolbox.com/vendor/4/0/8/b_2699804.jpg"></div></a>
+</div>
+                                    <div class="floatleft">
+<a href="http://it.toolbox.com/companies/imation" class="dynaheader-dircomps">Imation</a></div>
+                                    <div class="clear"></div>                   
+                                </div>
+                            
+                    </div>
+                    <div class="clear"></div>
+                    <div style="height:20px">
+                        <div class="dynaheader-dirpanel dynaheader-dirpanelshort">
+                            <a href="http://it.toolbox.com/topics" class="dynaheader-panellink">View All Topics</a>
+                        </div> 
+                        <div class="dynaheader-dirpanel dynaheader-dirpanelshort">
+                            <a href="http://it.toolbox.com/people" class="dynaheader-panellink">View All Members</a>
+                        </div>
+                        <div class="dynaheader-dirpanel dynaheader-dirpanelshort">
+                             <a href="http://it.toolbox.com/companies" class="dynaheader-panellink">View All Companies</a>
+                        </div>
+                    </div>    
+                </div>
+
+            </div>
+            </div>
+            <div id="dynaheader-navright-panel" class="dynaheader-navright" style="float:right;">
+
+                <div class="dynaheader-vertrule" style="float:right"></div>
+                <a href="http://it.toolbox.com/blogs/start-new-blog.aspx" id="m_GN_posticon" class="dynaheader-post" title="Write a Blog Post"></a>
+                <a href="http://it.toolbox.com/ask-a-question/" class="dynaheader-askq" title="Ask a Question"></a>
+                <div class="dynaheader-triggersearch" id="dynaheader-searchbutton" title="Search"></div>
+                <div class="dynaheader-panel" id="dynaheader-searchpanel"></div>
+
+            </div>
+        </div>
+    </div>
+
+ 
+
+
+
+        <div>
+<div id="zdstickyLeaderboard" align="center" style="margin-bottom:20px; min-height: 90px;"><div align="center" style="width: 100%; background-color: #F2F2F2;padding: 5px; min-height: 90px;">
+	<div id="div-gpt-ad-701406910-0">
+		<script type="text/javascript">
+			googletag.cmd.push(function() {
+			  googletag.display("div-gpt-ad-701406910-0");
+		});
+		</script>
+	</div>
+</div></div>
+        </div>
+        
+<div id="content">		
+
+    
+
+	<div class="content-leftcol">
+	
+    <div class="spacer" style="display:none">
+		<div>
+	
+	<div class="clear"></div>
+	<div class="spacer-ittybitty"></div>
+</div>
+
+<h1 class="darkgray size17 normal">Toolbox for IT</h1>
+	</div>
+    <div style="margin-bottom:25px">
+        <div class="topic-trigger topic-chooser dynaheader-trigger"></div>
+        <div class="topic-panel">
+			
+					<div style="float:left;  width:240px">
+				
+					<a class="dynaheader-dirtopics" href='http://businessintelligence.ittoolbox.com'>Business Intelligence</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://c.ittoolbox.com'>C Languages</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://cloud.ittoolbox.com'>Cloud Computing</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://telephony.ittoolbox.com'>Communications Technology</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://crm.ittoolbox.com'>CRM</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://datacenter.ittoolbox.com'>Data Center</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://datawarehouse.ittoolbox.com'>Data Warehouse</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://database.ittoolbox.com'>Database</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://emergingtech.ittoolbox.com'>Emerging Technology and Trends</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://eai.ittoolbox.com'>Enterprise Architecture and EAI</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://erp.ittoolbox.com'>ERP</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://hardware.ittoolbox.com'>Hardware</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://cio.ittoolbox.com'>IT Management and Strategy</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://java.ittoolbox.com'>Java</a>
+					</div><div style='float:left; width:220px'>
+				
+					<a class="dynaheader-dirtopics" href='http://knowledgemanagement.ittoolbox.com'>Knowledge Management</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://linux.ittoolbox.com'>Linux</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://networking.ittoolbox.com'>Networking</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://oracle.ittoolbox.com'>Oracle</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://peoplesoft.ittoolbox.com'>PeopleSoft</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://projectmanagement.ittoolbox.com'>Project and Portfolio Management</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://sap.ittoolbox.com'>SAP</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://supplychain.ittoolbox.com'>SCM</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://security.ittoolbox.com'>Security</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://siebel.ittoolbox.com'>Siebel</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://storage.ittoolbox.com'>Storage</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://unix.ittoolbox.com'>UNIX</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://visualbasic.ittoolbox.com'>Visual Basic</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://webdesign.ittoolbox.com'>Web Design and Development</a>
+					
+				
+					<a class="dynaheader-dirtopics" href='http://windows.ittoolbox.com'>Windows</a>
+					
+				
+					</div> 
+				
+        </div>
+        <h2 style="margin-left:15px; color:#676767; font-size:20px; font-weight:normal; padding-top:5px">Latest on IT</h2>
+    </div>
+    <div class="clear"></div>
+    
+<script>
+    $(document).ready(function () {
+        $(".content-leftcol").css("padding-right", "0px");
+    });
+</script>
+
+<div class="spacer-small clear">
+    
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl00_ra_blogsection" class="tile tile-1" style="background: url(https://userimages.ittoolbox.com/blogs/1772/75085/tile_d90aab0b-b419-42dd-98f7-0f5e8fa2bae1.jpg) center center no-repeat; -webkit-background-size: cover; moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+            <div class="tileTypeBox">
+                <div class="tileType">Blog
+                  
+                    
+                    </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl00_ra_t_tileclick" class="tileclick" href="http://it.toolbox.com/blogs/insidecrm/crm-and-the-notsoperfect-customer-75085"></a>
+            <div class="tileContent">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:240px">
+                        
+<a id="m_m_RecentActivity_r_ctl00_ra_t_hl" class=" white" href="http://it.toolbox.com/blogs/insidecrm/crm-and-the-notsoperfect-customer-75085">CRM and the Not-So-Perfect Customer</a><br />
+                        
+                    </div>
+                </div>
+                <div style="color:white" class="tile-details">
+                    <div class="floatleft">4 hours ago&nbsp;&nbsp;</div>
+                    <div class="floatleft"><a href="http://it.toolbox.com/blogs/insidecrm" class="tile-detailslink">The Inside-CRM Blog</a></div>         
+                </div>
+            </div> 
+        </div>  
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl01_ra_blogsection" class="tile tile-32" style="background: url(https://userimages.ittoolbox.com/blogs/1775/75084/tile_a515ef8a-537f-40ab-a36c-31a44ae8ab02.jpg) center center no-repeat; -webkit-background-size: cover; moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+            <div class="tileTypeBox">
+                <div class="tileType">Blog
+                  
+                    
+                    </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl01_ra_t_tileclick" class="tileclick" href="http://it.toolbox.com/blogs/itmanagement/an-easy-way-to-help-protect-against-email-phishing-75084"></a>
+            <div class="tileContent">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:240px">
+                        
+<a id="m_m_RecentActivity_r_ctl01_ra_t_hl" class=" white" href="http://it.toolbox.com/blogs/itmanagement/an-easy-way-to-help-protect-against-email-phishing-75084">An easy way to help protect against email phishing</a><br />
+                        
+                    </div>
+                </div>
+                <div style="color:white" class="tile-details">
+                    <div class="floatleft">4 hours ago&nbsp;&nbsp;</div>
+                    <div class="floatleft"><a href="http://it.toolbox.com/blogs/itmanagement" class="tile-detailslink">The IT Management Blog</a></div>         
+                </div>
+            </div> 
+        </div>  
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl02_ra_blogsection" class="tile tile-32" style="background: url(https://userimages.ittoolbox.com/blogs/1775/75083/tile_bd65b553-c3f1-47d8-a0d3-26ea6bec83e8.jpg) center center no-repeat; -webkit-background-size: cover; moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+            <div class="tileTypeBox">
+                <div class="tileType">Blog
+                  
+                    
+                    </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl02_ra_t_tileclick" class="tileclick" href="http://it.toolbox.com/blogs/itmanagement/vendorproposed-solutions-are-not-always-what-you-need-for-security-75083"></a>
+            <div class="tileContent">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:240px">
+                        
+<a id="m_m_RecentActivity_r_ctl02_ra_t_hl" class=" white" href="http://it.toolbox.com/blogs/itmanagement/vendorproposed-solutions-are-not-always-what-you-need-for-security-75083">Vendor-proposed solutions are not always what you ...</a><br />
+                        
+                    </div>
+                </div>
+                <div style="color:white" class="tile-details">
+                    <div class="floatleft">4 hours ago&nbsp;&nbsp;</div>
+                    <div class="floatleft"><a href="http://it.toolbox.com/blogs/itmanagement" class="tile-detailslink">The IT Management Blog</a></div>         
+                </div>
+            </div> 
+        </div>  
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl03_ra_researchsection" class="tile tile-86">
+            <div id="m_m_RecentActivity_r_ctl03_ra_divtileTypeBox" class="tileTypeBox">
+                <div class="tileType">
+                    White Paper
+                    
+                    
+                </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl03_ra_r_tileclick" class="tileclick" href="http://www.itmanagement.com/research/reached-your-tablow-42874"></a>
+            <div id="m_m_RecentActivity_r_ctl03_ra_divtransContent" class="tileContent tileContent-new">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:200px">
+<a id="m_m_RecentActivity_r_ctl03_ra_t_research_hl" class=" white" href="http://www.itmanagement.com/research/reached-your-tablow-42874">Reached Your Tablow?</a></div>
+                </div>
+                <div class="tile-details-new">
+                    <div class="floatleft">4 hours ago</div>
+                    <div class="floatleft tile-details-Parent"><a href="http://www.itmanagement.com" class="tile-detailslink">IT Management</a> </div>     
+               </div>
+            </div> 
+        </div>   
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl04_ra_blogsection" class="tile tile-4">
+            <div class="tileTypeBox">
+                <div class="tileType">Blog
+                  
+                    
+                    </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl04_ra_t_tileclick" class="tileclick" href="http://it.toolbox.com/blogs/erp-roi/five-common-pitfalls-of-defining-an-erp-and-it-strategy-75082"></a>
+            <div class="tileContent">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:240px">
+                        
+<a id="m_m_RecentActivity_r_ctl04_ra_t_hl" class=" white" href="http://it.toolbox.com/blogs/erp-roi/five-common-pitfalls-of-defining-an-erp-and-it-strategy-75082">Five Common Pitfalls of Defining an ERP and IT ...</a><br />
+                        
+                    </div>
+                </div>
+                <div style="color:white" class="tile-details">
+                    <div class="floatleft">5 hours ago&nbsp;&nbsp;</div>
+                    <div class="floatleft"><a href="http://it.toolbox.com/blogs/erp-roi" class="tile-detailslink">In Search of Business ...</a></div>         
+                </div>
+            </div> 
+        </div>  
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl05_ra_blogsection" class="tile tile-4" style="background: url(https://userimages.ittoolbox.com/blogs/1781/75081/tile_25fc6a9a-52da-42c0-bb75-5453bbfee932.jpg) center center no-repeat; -webkit-background-size: cover; moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+            <div class="tileTypeBox">
+                <div class="tileType">Blog
+                  
+                    
+                    </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl05_ra_t_tileclick" class="tileclick" href="http://it.toolbox.com/blogs/inside-erp/how-a-software-evaluation-firm-can-help-find-the-right-erp-solution-75081"></a>
+            <div class="tileContent">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:240px">
+                        
+<a id="m_m_RecentActivity_r_ctl05_ra_t_hl" class=" white" href="http://it.toolbox.com/blogs/inside-erp/how-a-software-evaluation-firm-can-help-find-the-right-erp-solution-75081">How a software evaluation firm can help find the ...</a><br />
+                        
+                    </div>
+                </div>
+                <div style="color:white" class="tile-details">
+                    <div class="floatleft">6 hours ago&nbsp;&nbsp;</div>
+                    <div class="floatleft"><a href="http://it.toolbox.com/blogs/inside-erp" class="tile-detailslink">The Inside-ERP Blog</a></div>         
+                </div>
+            </div> 
+        </div>  
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl06_ra_blogsection" class="tile tile-1" style="background: url(https://userimages.ittoolbox.com/blogs/1772/75080/tile_8af68cb3-75d1-4c8d-a47c-a230401c79d9.jpg) center center no-repeat; -webkit-background-size: cover; moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+            <div class="tileTypeBox">
+                <div class="tileType">Blog
+                  
+                    
+                    </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl06_ra_t_tileclick" class="tileclick" href="http://it.toolbox.com/blogs/insidecrm/salesforce-finds-holiday-shoppers-staying-home-and-going-more-mobile-75080"></a>
+            <div class="tileContent">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:240px">
+                        
+<a id="m_m_RecentActivity_r_ctl06_ra_t_hl" class=" white" href="http://it.toolbox.com/blogs/insidecrm/salesforce-finds-holiday-shoppers-staying-home-and-going-more-mobile-75080">Salesforce finds holiday shoppers staying home and ...</a><br />
+                        
+                    </div>
+                </div>
+                <div style="color:white" class="tile-details">
+                    <div class="floatleft">6 hours ago&nbsp;&nbsp;</div>
+                    <div class="floatleft"><a href="http://it.toolbox.com/blogs/insidecrm" class="tile-detailslink">The Inside-CRM Blog</a></div>         
+                </div>
+            </div> 
+        </div>  
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl07_ra_blogsection" class="tile tile-75" style="background: url(https://userimages.ittoolbox.com/blogs/1776/75079/tile_b0532e53-2bbd-40b8-9bce-b1f1fd348e25.jpg) center center no-repeat; -webkit-background-size: cover; moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+            <div class="tileTypeBox">
+                <div class="tileType">Blog
+                  
+                    
+                    </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl07_ra_t_tileclick" class="tileclick" href="http://it.toolbox.com/blogs/voip-news/be-warned-cyberattacks-using-voip-protocols-are-on-the-rise-75079"></a>
+            <div class="tileContent">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:240px">
+                        
+<a id="m_m_RecentActivity_r_ctl07_ra_t_hl" class=" white" href="http://it.toolbox.com/blogs/voip-news/be-warned-cyberattacks-using-voip-protocols-are-on-the-rise-75079">Be warned: Cyberattacks using VoIP protocols are ...</a><br />
+                        
+                    </div>
+                </div>
+                <div style="color:white" class="tile-details">
+                    <div class="floatleft">6 hours ago&nbsp;&nbsp;</div>
+                    <div class="floatleft"><a href="http://it.toolbox.com/blogs/voip-news" class="tile-detailslink">The VoIP-News Blog</a></div>         
+                </div>
+            </div> 
+        </div>  
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl08_ra_blogsection" class="tile tile-75" style="background: url(https://userimages.ittoolbox.com/blogs/1776/75078/tile_594b4cab-e167-437f-8e62-19913093a5ff.jpg) center center no-repeat; -webkit-background-size: cover; moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+            <div class="tileTypeBox">
+                <div class="tileType">Blog
+                  
+                    
+                    </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl08_ra_t_tileclick" class="tileclick" href="http://it.toolbox.com/blogs/voip-news/how-different-work-styles-impact-the-need-for-uc-75078"></a>
+            <div class="tileContent">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:240px">
+                        
+<a id="m_m_RecentActivity_r_ctl08_ra_t_hl" class=" white" href="http://it.toolbox.com/blogs/voip-news/how-different-work-styles-impact-the-need-for-uc-75078">How Different Work Styles Impact the Need for UC</a><br />
+                        
+                    </div>
+                </div>
+                <div style="color:white" class="tile-details">
+                    <div class="floatleft">6 hours ago&nbsp;&nbsp;</div>
+                    <div class="floatleft"><a href="http://it.toolbox.com/blogs/voip-news" class="tile-detailslink">The VoIP-News Blog</a></div>         
+                </div>
+            </div> 
+        </div>  
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl09_ra_blogsection" class="tile tile-6" style="background: url(https://userimages.ittoolbox.com/blogs/1241/75077/tile_e2a7ba0f-c7b3-4f51-8f8e-be65a4f482bd.png) center center no-repeat; -webkit-background-size: cover; moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+            <div class="tileTypeBox">
+                <div class="tileType">Blog
+                  
+                    
+                    </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl09_ra_t_tileclick" class="tileclick" href="http://it.toolbox.com/blogs/nerf/when-to-use-sap-gui-scripting-75077"></a>
+            <div class="tileContent">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:240px">
+                        
+<a id="m_m_RecentActivity_r_ctl09_ra_t_hl" class=" white" href="http://it.toolbox.com/blogs/nerf/when-to-use-sap-gui-scripting-75077">When to use SAP GUI Scripting </a><br />
+                        
+                    </div>
+                </div>
+                <div style="color:white" class="tile-details">
+                    <div class="floatleft">9 hours ago&nbsp;&nbsp;</div>
+                    <div class="floatleft"><a href="http://it.toolbox.com/blogs/nerf" class="tile-detailslink">The nerf of it all</a></div>         
+                </div>
+            </div> 
+        </div>  
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl10_ra_blogsection" class="tile tile-15" style="background: url(https://userimages.ittoolbox.com/blogs/388/75076/tile_02a52438-974b-454b-8c04-2f396f3d709d.jpg) center center no-repeat; -webkit-background-size: cover; moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+            <div class="tileTypeBox">
+                <div class="tileType">Blog
+                  
+                    
+                    </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl10_ra_t_tileclick" class="tileclick" href="http://it.toolbox.com/blogs/data-ruminations/sql-server-can-be-so-insensitive-hard-lessons-for-the-oraclista-75076"></a>
+            <div class="tileContent">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:240px">
+                        
+<a id="m_m_RecentActivity_r_ctl10_ra_t_hl" class=" white" href="http://it.toolbox.com/blogs/data-ruminations/sql-server-can-be-so-insensitive-hard-lessons-for-the-oraclista-75076">SQL Server Can Be So Insensitive: Hard Lessons for ...</a><br />
+                        
+                    </div>
+                </div>
+                <div style="color:white" class="tile-details">
+                    <div class="floatleft">18 hours ago&nbsp;&nbsp;</div>
+                    <div class="floatleft"><a href="http://it.toolbox.com/blogs/data-ruminations" class="tile-detailslink">Data Ruminations</a></div>         
+                </div>
+            </div> 
+        </div>  
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl11_ra_blogsection" class="tile tile-2">
+            <div class="tileTypeBox">
+                <div class="tileType">Blog
+                  
+                    
+                    </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl11_ra_t_tileclick" class="tileclick" href="http://it.toolbox.com/blogs/enterprise-solutions/managing-the-arp-cache-in-tcpip-75075"></a>
+            <div class="tileContent">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:240px">
+                        
+<a id="m_m_RecentActivity_r_ctl11_ra_t_hl" class=" white" href="http://it.toolbox.com/blogs/enterprise-solutions/managing-the-arp-cache-in-tcpip-75075">Managing the ARP Cache in TCP/IP</a><br />
+                        
+                    </div>
+                </div>
+                <div style="color:white" class="tile-details">
+                    <div class="floatleft">21 hours ago&nbsp;&nbsp;</div>
+                    <div class="floatleft"><a href="http://it.toolbox.com/blogs/enterprise-solutions" class="tile-detailslink">Observations from a Tech ...</a></div>         
+                </div>
+            </div> 
+        </div>  
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl12_ra_blogsection" class="tile tile-4" style="background: url(https://userimages.ittoolbox.com/blogs/1781/75074/tile_c6101938-bf61-488e-91dd-4a2f7af09800.jpg) center center no-repeat; -webkit-background-size: cover; moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+            <div class="tileTypeBox">
+                <div class="tileType">Blog
+                  
+                    
+                    </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl12_ra_t_tileclick" class="tileclick" href="http://it.toolbox.com/blogs/inside-erp/erp-and-shipping-join-forces-to-service-fastgrowing-ecommerce-sector-75074"></a>
+            <div class="tileContent">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:240px">
+                        
+<a id="m_m_RecentActivity_r_ctl12_ra_t_hl" class=" white" href="http://it.toolbox.com/blogs/inside-erp/erp-and-shipping-join-forces-to-service-fastgrowing-ecommerce-sector-75074">ERP and shipping join forces to service ...</a><br />
+                        
+                    </div>
+                </div>
+                <div style="color:white" class="tile-details">
+                    <div class="floatleft">1 day ago&nbsp;&nbsp;</div>
+                    <div class="floatleft"><a href="http://it.toolbox.com/blogs/inside-erp" class="tile-detailslink">The Inside-ERP Blog</a></div>         
+                </div>
+            </div> 
+        </div>  
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl13_ra_blogsection" class="tile tile-4" style="background: url(https://userimages.ittoolbox.com/blogs/1781/75073/tile_01d66be5-4718-4be0-9e2f-8dd28be62d07.jpg) center center no-repeat; -webkit-background-size: cover; moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+            <div class="tileTypeBox">
+                <div class="tileType">Blog
+                  
+                    
+                    </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl13_ra_t_tileclick" class="tileclick" href="http://it.toolbox.com/blogs/inside-erp/synergy-in-action-why-your-businesses-needs-effective-erp-75073"></a>
+            <div class="tileContent">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:240px">
+                        
+<a id="m_m_RecentActivity_r_ctl13_ra_t_hl" class=" white" href="http://it.toolbox.com/blogs/inside-erp/synergy-in-action-why-your-businesses-needs-effective-erp-75073">Synergy in Action: Why Your Businesses Needs ...</a><br />
+                        
+                    </div>
+                </div>
+                <div style="color:white" class="tile-details">
+                    <div class="floatleft">1 day ago&nbsp;&nbsp;</div>
+                    <div class="floatleft"><a href="http://it.toolbox.com/blogs/inside-erp" class="tile-detailslink">The Inside-ERP Blog</a></div>         
+                </div>
+            </div> 
+        </div>  
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl14_ra_blogsection" class="tile tile-1" style="background: url(https://userimages.ittoolbox.com/blogs/1772/75072/tile_ce0ce4cd-05d5-4fb1-b7c9-7ba868c923b1.jpg) center center no-repeat; -webkit-background-size: cover; moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+            <div class="tileTypeBox">
+                <div class="tileType">Blog
+                  
+                    
+                    </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl14_ra_t_tileclick" class="tileclick" href="http://it.toolbox.com/blogs/insidecrm/ai-brings-competitive-intelligence-to-crm-systems-75072"></a>
+            <div class="tileContent">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:240px">
+                        
+<a id="m_m_RecentActivity_r_ctl14_ra_t_hl" class=" white" href="http://it.toolbox.com/blogs/insidecrm/ai-brings-competitive-intelligence-to-crm-systems-75072">AI brings competitive intelligence to CRM systems </a><br />
+                        
+                    </div>
+                </div>
+                <div style="color:white" class="tile-details">
+                    <div class="floatleft">1 day ago&nbsp;&nbsp;</div>
+                    <div class="floatleft"><a href="http://it.toolbox.com/blogs/insidecrm" class="tile-detailslink">The Inside-CRM Blog</a></div>         
+                </div>
+            </div> 
+        </div>  
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl15_ra_blogsection" class="tile tile-75" style="background: url(https://userimages.ittoolbox.com/blogs/1776/75071/tile_352b19a7-ead1-45c9-9669-66c172d96fe2.jpg) center center no-repeat; -webkit-background-size: cover; moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+            <div class="tileTypeBox">
+                <div class="tileType">Blog
+                  
+                    
+                    </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl15_ra_t_tileclick" class="tileclick" href="http://it.toolbox.com/blogs/voip-news/voip-call-filtering-to-block-spammers-achieves-new-heights-75071"></a>
+            <div class="tileContent">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:240px">
+                        
+<a id="m_m_RecentActivity_r_ctl15_ra_t_hl" class=" white" href="http://it.toolbox.com/blogs/voip-news/voip-call-filtering-to-block-spammers-achieves-new-heights-75071">VoIP call filtering to block spammers achieves new ...</a><br />
+                        
+                    </div>
+                </div>
+                <div style="color:white" class="tile-details">
+                    <div class="floatleft">1 day ago&nbsp;&nbsp;</div>
+                    <div class="floatleft"><a href="http://it.toolbox.com/blogs/voip-news" class="tile-detailslink">The VoIP-News Blog</a></div>         
+                </div>
+            </div> 
+        </div>  
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl16_ra_blogsection" class="tile tile-4" style="background: url(https://userimages.ittoolbox.com/blogs/1781/75070/tile_0016c2b3-6874-4938-be9f-e42dd682e0b2.jpg) center center no-repeat; -webkit-background-size: cover; moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+            <div class="tileTypeBox">
+                <div class="tileType">Blog
+                  
+                    
+                    </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl16_ra_t_tileclick" class="tileclick" href="http://it.toolbox.com/blogs/inside-erp/why-cloudbased-erp-is-the-future-75070"></a>
+            <div class="tileContent">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:240px">
+                        
+<a id="m_m_RecentActivity_r_ctl16_ra_t_hl" class=" white" href="http://it.toolbox.com/blogs/inside-erp/why-cloudbased-erp-is-the-future-75070">Why Cloud-Based ERP Is the Future</a><br />
+                        
+                    </div>
+                </div>
+                <div style="color:white" class="tile-details">
+                    <div class="floatleft">1 day ago&nbsp;&nbsp;</div>
+                    <div class="floatleft"><a href="http://it.toolbox.com/blogs/inside-erp" class="tile-detailslink">The Inside-ERP Blog</a></div>         
+                </div>
+            </div> 
+        </div>  
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl17_ra_blogsection" class="tile tile-8" style="background: url(https://userimages.ittoolbox.com/blogs/328/75069/tile_9428bb18-26e7-45d9-b39f-abd0ce111d2b.jpg) center center no-repeat; -webkit-background-size: cover; moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+            <div class="tileTypeBox">
+                <div class="tileType">Blog
+                  
+                    
+                    </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl17_ra_t_tileclick" class="tileclick" href="http://it.toolbox.com/blogs/peoplesoft-pro/the-fluid-ui-classic-menus-vs-fluid-navigator-75069"></a>
+            <div class="tileContent">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:240px">
+                        
+<a id="m_m_RecentActivity_r_ctl17_ra_t_hl" class=" white" href="http://it.toolbox.com/blogs/peoplesoft-pro/the-fluid-ui-classic-menus-vs-fluid-navigator-75069">The Fluid UI - Classic Menus vs. Fluid Navigator</a><br />
+                        
+                    </div>
+                </div>
+                <div style="color:white" class="tile-details">
+                    <div class="floatleft">1 day ago&nbsp;&nbsp;</div>
+                    <div class="floatleft"><a href="http://it.toolbox.com/blogs/peoplesoft-pro" class="tile-detailslink">A Day in the Life of a ...</a></div>         
+                </div>
+            </div> 
+        </div>  
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl18_ra_researchsection" class="tile tile-86">
+            <div id="m_m_RecentActivity_r_ctl18_ra_divtileTypeBox" class="tileTypeBox">
+                <div class="tileType">
+                    Webcast
+                    
+                    
+                </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl18_ra_r_tileclick" class="tileclick" href="http://www.itmanagement.com/research/deliver-highperformance-graphicallyaccelerated-vdi-42860"></a>
+            <div id="m_m_RecentActivity_r_ctl18_ra_divtransContent" class="tileContent tileContent-new">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:200px">
+<a id="m_m_RecentActivity_r_ctl18_ra_t_research_hl" class=" white" href="http://www.itmanagement.com/research/deliver-highperformance-graphicallyaccelerated-vdi-42860">Deliver High-Performance Graphically-Accelerated VDI</a></div>
+                </div>
+                <div class="tile-details-new">
+                    <div class="floatleft">1 day ago</div>
+                    <div class="floatleft tile-details-Parent"><a href="http://www.itmanagement.com" class="tile-detailslink">IT Management</a> </div>     
+               </div>
+            </div> 
+        </div>   
+    
+			
+									
+						
+        
+			
+            
+			
+        <div id="m_m_RecentActivity_r_ctl19_ra_researchsection" class="tile tile-86">
+            <div id="m_m_RecentActivity_r_ctl19_ra_divtileTypeBox" class="tileTypeBox">
+                <div class="tileType">
+                    Webcast
+                    
+                    
+                </div>
+            </div>
+            <a id="m_m_RecentActivity_r_ctl19_ra_r_tileclick" class="tileclick" href="http://www.itmanagement.com/research/lifescript-the-role-of-flash-in-highly-converged-infrastructure-environments-42859"></a>
+            <div id="m_m_RecentActivity_r_ctl19_ra_divtransContent" class="tileContent tileContent-new">
+                <div style="height:50px">
+                    <div class="floatleft"></div>
+                    <div class="floatleft" style="width:200px">
+<a id="m_m_RecentActivity_r_ctl19_ra_t_research_hl" class=" white" href="http://www.itmanagement.com/research/lifescript-the-role-of-flash-in-highly-converged-infrastructure-environments-42859">LifeScript: The role of Flash in Highly Converged Infrastructure Environments</a></div>
+                </div>
+                <div class="tile-details-new">
+                    <div class="floatleft">1 day ago</div>
+                    <div class="floatleft tile-details-Parent"><a href="http://www.itmanagement.com" class="tile-detailslink">IT Management</a> </div>     
+               </div>
+            </div> 
+        </div>   
+    
+			
+									
+						
+        
+	<div class="clear"></div>
+</div>
+    <div class="clear"></div>
+    
+
+
+    
+ 
+	
+    </div>
+    <div class="content-rightcol">
+        
+        
+    <div id="m_r_aas_tab1_cw">
+
+<div id="m_r_aas_tab1_divTabContainer" class="tabbednav-box">
+	
+			<div id="m_r_aas_tab1_rptTabs_ctl00_divTab" class="tabbednav-up" onclick="Toggle(this)" tabindex="0" data-layoutname="" tabcontainerid="m_r_aas_tab1_rptTabContents_ctl00_divTabContent">                
+				<span class="tabHandle">Ask a Question</span>
+			</div>
+			
+		
+		
+			<div id="m_r_aas_tab1_rptTabs_ctl02_divTab" class="tabbednav-down" onclick="Toggle(this); LoadTabContainer(this, &quot;GetUnanswered()&quot;)" tabindex="1" data-layoutname="" tabcontainerid="m_r_aas_tab1_rptTabContents_ctl01_divTabContent">                
+				<span class="tabHandle">Answer Questions</span>
+			</div>
+			
+		
+		
+			<div id="m_r_aas_tab1_rptTabs_ctl04_divTab" class="tabbednav-down" onclick="Toggle(this)" tabindex="2" data-layoutname="" tabcontainerid="m_r_aas_tab1_rptTabContents_ctl02_divTabContent">                
+				<span class="tabHandle">Search</span>
+			</div>
+			
+		
+	<div class="clear"></div>	
+	<input type="hidden" name="m$r$aas$tab1$hfActiveTab" id="m_r_aas_tab1_hfActiveTab" value="0" />
+</div>
+
+<div id="m_r_aas_tab1_divTabContent" data-marker="contentMarker" class="tabbednav-contentsmall">
+	   
+			<div id="m_r_aas_tab1_rptTabContents_ctl00_divTabContent" style="">
+								
+				
+        <div id="m_r_aas_tab1_rptTabContents_ctl00_dErr" class="error displaynone" style="padding: 0 0 5px 0;">
+            Please enter your question.
+        </div>
+        <input name="m$r$aas$tab1$rptTabContents$ctl00$txtAsk" type="text" id="m_r_aas_tab1_rptTabContents_ctl00_txtAsk" class="floatleft" style="width:318px; height:18px; margin-bottom:10px" watermark="What&#39;s your question? Get answers in minutes." />
+        
+        <div class="floatright" style="padding: 4px 0 0 0">
+        <table id="m_r_aas_tab1_rptTabContents_ctl00_btnAsk_tbCt" class="button-outergreen" cellpadding="0" cellspacing="0">
+	<tr>
+		<td id="m_r_aas_tab1_rptTabContents_ctl00_btnAsk_tdCt" class="button-innergreen">
+            <input type="submit" name="m$r$aas$tab1$rptTabContents$ctl00$btnAsk$btnCTA" value="Ask" id="m_r_aas_tab1_rptTabContents_ctl00_btnAsk_btnCTA" class="button" />
+            
+        </td>
+	</tr>
+</table>
+
+
+        </div>
+        <div class="clear"></div>
+    
+			</div>            
+		   
+			<div id="m_r_aas_tab1_rptTabContents_ctl01_divTabContent" style="display:none;">
+				<div id="m_r_aas_tab1_rptTabContents_ctl01_divLoading" style="display:none;" loader="true" class="SmallTabLoading">Loading...</div>				
+				
+			</div>            
+		   
+			<div id="m_r_aas_tab1_rptTabContents_ctl02_divTabContent" style="display:none;">
+								
+				
+      <div id="m_r_aas_tab1_rptTabContents_ctl02_dsErr" class="error displaynone" style="padding: 0 0 5px 0;">
+            Please enter a search term.
+        </div>
+          <input name="m$r$aas$tab1$rptTabContents$ctl02$txtSearch" type="text" id="m_r_aas_tab1_rptTabContents_ctl02_txtSearch" class="floatleft" style="width:318px; height:18px; margin-bottom:10px" watermark="Search for answers, research, blogs and more..." defaultButton="m_r_aas_tab1_rptTabContents_ctl02_btnSearch_btnCTA" />    
+        <div class="floatright" style="padding: 4px 0 0 0;">
+        <table id="m_r_aas_tab1_rptTabContents_ctl02_btnSearch_tbCt" class="button-outergreen" cellpadding="0" cellspacing="0">
+	<tr>
+		<td id="m_r_aas_tab1_rptTabContents_ctl02_btnSearch_tdCt" class="button-innergreen">
+            <input type="submit" name="m$r$aas$tab1$rptTabContents$ctl02$btnSearch$btnCTA" value="Search" id="m_r_aas_tab1_rptTabContents_ctl02_btnSearch_btnCTA" class="button" />
+            
+        </td>
+	</tr>
+</table>
+
+
+        </div>
+        <div class="clear"></div>
+    
+			</div>            
+		
+            <div class="clear"></div>
+        
+</div>
+
+</div>
+    
+    
+    
+    <script type="text/javascript">
+    	function GetUnanswered() {
+    		var html;
+    		$.ajax({
+    			async: false,
+    			url: '/api/kb/unanswered.aspx?siteid=33',
+    			success: function (data) {
+    				html = data;
+    			}
+    		});
+    		return html;
+    	}
+    </script>
+	
+    <div id="zdstickyTopSidebar">
+
+	<div id="div-gpt-ad-701406910-1">
+		<script type="text/javascript">
+			googletag.cmd.push(function() {
+			  googletag.display("div-gpt-ad-701406910-1");
+		});
+		</script>
+	</div>
+</div>
+    
+<script>
+    function showCaptcha() {
+        /*var element = document.getElementById('ctl00_ctl00_mainBody_peopleMainContent_MiniDash_ctl02_captchaDiv')                                                
+        element.style.display = 'block';*/
+    }
+</script>
+<script type="text/javascript">
+    // CALL TO ACTION TRACKING
+    var IsCallToActionSet = false;
+    var ctaBtnClicked = null;
+    var ctaDtClicked = null;
+    var ckUrl = null;
+    function TrackCallToAction(sender, ctaName) {
+        try {
+            if (sender != null && sender != ctaBtnClicked) {
+                ctaBtnClicked = sender;
+                ctaDtClicked = new Date();
+                var myUrl = 'http%3a%2f%2fit.toolbox.com%2fDefault.aspx';
+                ckUrl = 'http://it.toolbox.com/api/ctatools/CreateCookie.aspx?CTAPage=' + myUrl + '&CTA=' + ctaName;
+
+                document.getElementById('ctaimage').src = ckUrl;
+                // Give the image a second
+                setTimeout("ctaBtnClicked.click()", 1500);
+            }
+            if ((new Date() - ctaDtClicked) > 1499)//the wait is over
+            {
+                IsCallToActionSet = true;
+            }
+            return IsCallToActionSet;
+        }
+        catch (e) { }
+    }
+    function CallToActionSet(el) {
+        if (el.src) {
+            IsCallToActionSet = true;
+            ctaBtnClicked.click();
+        }
+    }
+</script>
+<div class="spacer">
+
+<div class="box-containerbase">
+    
+        
+     
+        <div id="m_r_JoinNow2_CTA_joinNow">  
+            <div id="m_r_JoinNow2_CTA_pnlJoin">
+	
+                <div class="size20 blue">Q&A, Blogs, Research & More</div>
+                <div class="spacer-small"></div>
+
+                <ul style="margin:7px 0px 10px 17px">
+                    <li class="bullet"><span class="anthracite">Get the answers you want from <span class="bold anthracite">industry experts</span></span></li>
+                    <li class="bullet"><span class="anthracite"><span class="bold anthracite">Stay informed</span> about the latest industry developments</span></li>
+                    <li class="bullet"><span class="anthracite">Share your expertise with <span class="bold anthracite">millions of professionals</span></span></li>
+                </ul>
+                
+                <div class="spacer-tiny"></div>   
+                <div class="floatleft"><input name="m$r$JoinNow2$CTA$tbEmail" type="text" value="Your email address" id="m_r_JoinNow2_CTA_tbEmail" class="textbox230" watermark="Your email address" defaultButton="m_r_JoinNow2_CTA_btnJoin_btnCTA" style="height:17px; margin-right:4px" /></div>
+                <div class="floatleft"><table id="m_r_JoinNow2_CTA_btnJoin_tbCt" class="button-outerblue" cellpadding="0" cellspacing="0">
+		<tr>
+			<td id="m_r_JoinNow2_CTA_btnJoin_tdCt" class="button-innerblue">
+            <input type="submit" name="m$r$JoinNow2$CTA$btnJoin$btnCTA" value="Join Now" onclick="javascript:TrackCallToAction(this,&#39;JoinNow&#39;);" id="m_r_JoinNow2_CTA_btnJoin_btnCTA" class="button" />
+            
+        </td>
+		</tr>
+	</table>
+	
+</div>
+                <input type="hidden" name="m$r$JoinNow2$CTA$t" id="m_r_JoinNow2_CTA_t" value="2" />
+
+            
+</div>
+        </div>
+
+        
+    
+    <div style="clear:both"></div>
+</div>
+
+</div>
+    
+
+<div class="trendingbg">Trending</div>
+
+<div id="m_r_PopularContent1_f1" class="spacer">
+    <div class="spacer"></div>
+	<div class="floatleft">
+        <a><div class="userimage-defaultMedium90"></div></a>
+
+        
+    </div>
+    <div class="floatleft" style="width:60%; padding-left:10px">
+	    
+<a href="http://unix.ittoolbox.com/groups/technical-functional/solaris-l/convert-bash-into-aix-5963011" class="trendingcontent">Convert Bash into AIX</a><br />
+        <span class="gray size11">Question by </span> 
+        
+<a class=" size11" href="http://it.toolbox.com/people/community_member/?u=94649">Abhijeet_Yendhe</a>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+
+<div id="m_r_PopularContent1_f2" class="spacer">
+    <div class="spacer"></div>
+	<div class="floatleft">
+        
+        <img id="m_r_PopularContent1_imgEntityImage2" class="entityimage-defaultsmall" src="https://userimages.ittoolbox.com/blogs/328/75069/m_9428bb18-26e7-45d9-b39f-abd0ce111d2b.jpg" style="border-width:0px;" />
+    </div>
+	<div class="floatleft" style="width:60%; padding-left:10px">
+		
+<a href="http://it.toolbox.com/blogs/peoplesoft-pro/the-fluid-ui-classic-menus-vs-fluid-navigator-75069" class="trendingcontent">The Fluid UI - Classic Menus vs. Fluid Navigator</a>
+		<div class="spacer-tiny"></div>
+		<span class="gray size11">Blog post by </span>
+<a class=" size11" href="http://it.toolbox.com/people/pstools/">Derek Tomei</a>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+<!-- Featured 3 -->
+
+	<div>
+	
+        <div class="floatleft">
+            <a><div class="userimage-defaultMedium90 badgePopup" lazysource="https://userimages.ittoolbox.com/user/7/9/2/m_450297.jpg" bID="450297" badgeEntityID="450297"></div></a>
+
+        </div>
+        <div class="floatleft" style="width:60%; padding-left:10px;" id="f3">
+            
+<a href="http://it.toolbox.com/blogs/enterprise-solutions/managing-the-arp-cache-in-tcpip-75075" class="trendingcontent">Managing the ARP Cache in TCP/IP</a>
+            <div class="spacer-tiny"></div>
+                <span class="gray size11">Blog post by  
+<a id="m_r_PopularContent1_rf3_ctl01_af3_hl" class=" size11" href="http://it.toolbox.com/people/craigwb/">Craig Borysowich</a></span>
+            <div class="clear spacer-small"></div>
+        </div>
+        <div class="clear"></div>
+        <div class="spacer"></div>
+    
+        <div class="floatleft">
+            <a><div class="userimage-defaultMedium90 badgePopup" lazysource="https://userimages.ittoolbox.com/user/2/6/7/m_3370762.jpg" bID="3370762" badgeEntityID="3370762"></div></a>
+
+        </div>
+        <div class="floatleft" style="width:60%; padding-left:10px;" id="f3">
+            
+<a href="http://it.toolbox.com/blogs/insidecrm/mobile-mistakes-with-crm-75059" class="trendingcontent">Mobile Mistakes with CRM</a>
+            <div class="spacer-tiny"></div>
+                <span class="gray size11">Blog post by  
+<a id="m_r_PopularContent1_rf3_ctl02_af3_hl" class=" size11" href="http://it.toolbox.com/people/insidecrm/">Inside-CRM</a></span>
+            <div class="clear spacer-small"></div>
+        </div>
+        <div class="clear"></div>
+        <div class="spacer"></div>
+    
+        <div class="floatleft">
+            <a><div class="userimage-defaultMedium90 badgePopup" lazysource="https://userimages.ittoolbox.com/user/3/8/3/m_29383.jpg" bID="29383" badgeEntityID="29383"></div></a>
+
+        </div>
+        <div class="floatleft" style="width:60%; padding-left:10px;" id="f3">
+            
+<a href="http://it.toolbox.com/blogs/data-ruminations/sql-server-can-be-so-insensitive-hard-lessons-for-the-oraclista-75076" class="trendingcontent">SQL Server Can Be So Insensitive: Hard Lessons for the Oraclista</a>
+            <div class="spacer-tiny"></div>
+                <span class="gray size11">Blog post by  
+<a id="m_r_PopularContent1_rf3_ctl03_af3_hl" class=" size11" href="http://it.toolbox.com/people/ganotedp/">Duke Ganote</a></span>
+            <div class="clear spacer-small"></div>
+        </div>
+        <div class="clear"></div>
+        <div class="spacer"></div>
+    
+        <div class="floatleft">
+            <a><div class="userimage-defaultMedium90 badgePopup" lazysource="https://userimages.ittoolbox.com/user/1/6/6/m_101661.jpg" bID="101661" badgeEntityID="101661"></div></a>
+
+        </div>
+        <div class="floatleft" style="width:60%; padding-left:10px;" id="f3">
+            
+<a href="http://it.toolbox.com/blogs/nerf/when-to-use-sap-gui-scripting-75077" class="trendingcontent">When to use SAP GUI Scripting </a>
+            <div class="spacer-tiny"></div>
+                <span class="gray size11">Blog post by  
+<a id="m_r_PopularContent1_rf3_ctl04_af3_hl" class=" size11" href="http://it.toolbox.com/people/africanoracle/">Clinton Jones</a></span>
+            <div class="clear spacer-small"></div>
+        </div>
+        <div class="clear"></div>
+        <div class="spacer"></div>
+    	
+		<div class="clear"></div>
+	</div>
+	
+
+
+    <div class="box-standardtitlebase box-standard">
+    <span class="bold anthracite size12 floatleft">Recent Members</span>
+    <div class="floatright">
+        
+    </div>
+    <div style="clear:both"></div>
+</div>
+<div class="box-containerbase">
+    
+
+<table id="m_r_RecentMembers_container_scRecentMembers_dlRecentMembers" cellspacing="0" border="0" style="border-collapse:collapse;">
+	<tr>
+		<td>
+        <div id="new-members-image">
+            <a href="http://it.toolbox.com/people/nowrooz/"><div class="userimage-defaultsmall" lazysource="https://userimages.ittoolbox.com/user/1/6/7/s_8957761.jpg"></div></a>
+
+        </div>
+    </td><td>
+        <div id="new-members-image">
+            <a href="http://it.toolbox.com/people/datamanusallc/"><div class="userimage-defaultsmall" lazysource="https://userimages.ittoolbox.com/user/8/6/8/s_8956868.jpg"></div></a>
+
+        </div>
+    </td><td>
+        <div id="new-members-image">
+            <a href="http://it.toolbox.com/people/topeotk/"><div class="userimage-defaultsmall" lazysource="https://userimages.ittoolbox.com/user/6/7/6/s_8956676.jpg"></div></a>
+
+        </div>
+    </td><td>
+        <div id="new-members-image">
+            <a href="http://it.toolbox.com/people/caseysurgicalart/"><div class="userimage-defaultsmall" lazysource="https://userimages.ittoolbox.com/user/4/1/4/s_8955414.jpg"></div></a>
+
+        </div>
+    </td>
+	</tr><tr>
+		<td>
+        <div id="new-members-image">
+            <a href="http://it.toolbox.com/people/cartoozo/"><div class="userimage-defaultsmall" lazysource="https://userimages.ittoolbox.com/user/1/1/8/s_8952811.jpg"></div></a>
+
+        </div>
+    </td><td>
+        <div id="new-members-image">
+            <a href="http://it.toolbox.com/people/lindseywalker/"><div class="userimage-defaultsmall" lazysource="https://userimages.ittoolbox.com/user/3/2/0/s_8949023.jpg"></div></a>
+
+        </div>
+    </td><td>
+        <div id="new-members-image">
+            <a href="http://it.toolbox.com/people/simrinchoudhrie/"><div class="userimage-defaultsmall" lazysource="https://userimages.ittoolbox.com/user/8/4/2/s_8947248.jpg"></div></a>
+
+        </div>
+    </td><td>
+        <div id="new-members-image">
+            <a href="http://it.toolbox.com/people/amandeep123/"><div class="userimage-defaultsmall" lazysource="https://userimages.ittoolbox.com/user/8/0/7/s_8937708.jpg"></div></a>
+
+        </div>
+    </td>
+	</tr>
+</table>
+
+    <div style="clear:both"></div>
+</div>
+
+
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+
+<div>
+	
+ <div id="footer">
+        <div id="footer-inner">
+
+
+            <div>
+ <div>
+		
+  <div class="footer-colsmall">
+   
+<div class="footer-header lightgray spacer-small">Toolbox for IT</div>
+<a class="footer-link" href="http://it.toolbox.com/home/" >My Home</a>
+<a class="footer-link" href="http://it.toolbox.com/topics/" >Topics</a>
+<a class="footer-link" href="http://it.toolbox.com/people/" >People</a>
+<a class="footer-link" href="http://it.toolbox.com/companies/" >Companies</a>
+<a class="footer-link" href="http://it.toolbox.com/jobs/" >Jobs</a>
+<a class="footer-link" href="http://it.toolbox.com/companies/white-papers/" >White Paper Library</a>
+   <br />
+   
+<div class="footer-colsmall spacer-small">
+<div>
+			
+ <div class="footer-header lightgray">Collaboration Tools</div>
+ <a href="http://it.toolbox.com/groups/" class="footer-link">Discussion Groups</a>
+ <a href="http://it.toolbox.com/blogs/" class="footer-link">Blogs</a>
+
+		</div>
+
+
+</div>
+   
+<div class="footer-header lightgray">Follow Toolbox.com</div>
+
+<a href="http://twitter.com/toolboxforit" class="footer-link" target="_blank" >Toolbox for IT on Twitter</a>  
+
+<a href="http://twitter.com/toolboxdotcom" class="footer-link" target="_blank" >Toolbox.com on Twitter</a>  
+<a href="http://www.facebook.com/pages/Toolboxcom/117012708708" class="footer-link" target="_blank" >Toolbox.com on Facebook</a>  
+
+  </div>
+  <div class="footer-colwide">
+<div class="footer-header lightgray spacer-small">Topics on Toolbox for IT</div>
+<div>
+ <div class="footer-topicsbox">
+ <div class="footer-header lightgray">Data Center</div>
+    <a href="http://datacenter.ittoolbox.com/" class="footer-link">Data Center</a>
+ <div class="spacer"></div>
+ <div class="footer-header lightgray">Development</div>
+    <a href="http://c.ittoolbox.com/" class="footer-link">C Languages</a>
+    <a href="http://java.ittoolbox.com/" class="footer-link">Java</a>
+    <a href="http://visualbasic.ittoolbox.com/" class="footer-link">Visual Basic</a>
+    <a href="http://webdesign.ittoolbox.com/" class="footer-link">Web Design &amp; Development</a>
+ <div class="spacer"></div>
+ <div class="footer-header lightgray">Enterprise Applications</div>
+    <a href="http://crm.ittoolbox.com/" class="footer-link">CRM</a>
+    <a href="http://erp.ittoolbox.com/" class="footer-link">ERP</a>
+    <a href="http://peoplesoft.ittoolbox.com/" class="footer-link">PeopleSoft</a>
+    <a href="http://sap.ittoolbox.com/" class="footer-link">SAP</a>
+    <a href="http://supplychain.ittoolbox.com/" class="footer-link">SCM</a>
+    <a href="http://siebel.ittoolbox.com/" class="footer-link">Siebel</a>
+ </div>
+ <div class="footer-topicsbox">
+ <div class="footer-header lightgray">Enterprise Architecture &amp; EAI</div>
+    <a href="http://eai.ittoolbox.com/" class="footer-link">Enterprise Architecture & EAI</a>
+ <div class="spacer"></div>
+ <div class="footer-header lightgray"> Information Management</div>
+    <a href="http://businessintelligence.ittoolbox.com/" class="footer-link">Business Intelligence</a>
+    <a href="http://database.ittoolbox.com/" class="footer-link">Database</a>
+    <a href="http://datawarehouse.ittoolbox.com/" class="footer-link">Data Warehouse</a>
+    <a href="http://knowledgemanagement.ittoolbox.com/" class="footer-link">Knowledge Management</a>
+    <a href="http://oracle.ittoolbox.com/" class="footer-link">Oracle</a>
+ <div class="spacer"></div>
+ <div class="footer-header lightgray">IT Management &amp; Strategy</div>
+    <a href="http://emergingtech.ittoolbox.com/" class="footer-link">Emerging Technology &amp; Trends</a>
+    <a href="http://cio.ittoolbox.com/" class="footer-link">IT Management &amp; Strategy</a>
+    <a href="http://projectmanagement.ittoolbox.com/" class="footer-link">Project &amp; Portfolio Management</a>
+
+ <div class="spacer"></div>
+ <div class="footer-header lightgray">Cloud Computing</div>
+    <a href="http://cloud.ittoolbox.com/" class="footer-link">Cloud Computing</a>
+ </div>
+
+ <div class="footer-topicsbox">
+ <div class="footer-header lightgray">Networking &amp; Infrastructure</div>
+    <a href="http://hardware.ittoolbox.com/" class="footer-link">Hardware</a>
+    <a href="http://networking.ittoolbox.com/" class="footer-link">Networking</a>
+    <a href="http://telephony.ittoolbox.com/" class="footer-link">Communications Technology</a>
+ <div class="spacer"></div>
+ <div class="footer-header lightgray">Operating Systems</div>
+    <a href="http://linux.ittoolbox.com/" class="footer-link">Linux</a>
+    <a href="http://unix.ittoolbox.com/" class="footer-link">UNIX</a>
+    <a href="http://windows.ittoolbox.com/" class="footer-link">Windows</a>
+ <div class="spacer"></div>
+ <div class="footer-header lightgray">Security</div>
+    <a href="http://security.ittoolbox.com/" class="footer-link">Security</a>
+ <div class="spacer"></div>
+ <div class="footer-header lightgray">Storage</div>
+    <a href="http://storage.ittoolbox.com/" class="footer-link">Storage</a>
+ </div>
+ </div>    
+
+
+</div>
+
+  
+<div class="footer-colsmall">
+<div class="footer-header gray spacer-small">Toolbox.com</div>
+<a href="http://www.toolbox.com/about/" class="footer-link-gray">About</a>
+<a href="http://www.toolbox.com/news/" class="footer-link-gray">News</a>
+<a href="http://www.toolbox.com/PrivacyPolicy.aspx" class="footer-link-gray">Privacy</a>
+<a href="http://www.ziffdavis.com/terms-of-use" class="footer-link-gray">Terms of Use</a>
+<a href="http://www.toolbox.com/careers/" class="footer-link-gray">Work at Toolbox.com</a>
+<a href="http://www.toolbox.com/it/advertising/" class="footer-link-gray">Advertise</a>
+<a href="http://www.toolbox.com/contact/" class="footer-link-gray">Contact us</a>
+<a href="http://www.toolbox.com/Feedback.aspx" class="footer-link-gray">Provide Feedback</a>
+
+<br />
+<a href="http://www.toolbox.com/help" class="footer-link-gray">Help Topics</a>
+<a href="http://www.toolbox.com/Feedback.aspx" class="footer-link-gray">Technical Support</a>
+<div class="gray" style="padding: 0px 0px 0px 12px;">PCMag Digital Group</div>
+    <!--
+  Evidon tag
+  cid: 660
+  pid: 8
+-->
+
+
+
+<br />
+<br />
+<div>
+			
+ <div class="footer-header gray spacer-small">Other Communities</div>
+ 
+ <span>
+    <a href="http://hr.toolbox.com" class="footer-link-gray">Toolbox for HR</a> 
+ </span>
+ <span>
+    <a href="http://finance.toolbox.com" class="footer-link-gray">Toolbox for Finance</a> 
+ </span>
+
+		</div>
+
+</div>
+ 
+	</div>                
+ </div>
+            
+
+        </div>
+     <div style="clear:both"></div>
+    </div>
+
+
+</div>
+ 
+<div style="clear:both"></div>
+
+
+
+     <footer class="footer-info">
+			
+         	
+			<p class="copyright-info left-justified"> Copyright &copy;1998-2016 Ziff Davis, LLC 
+                 (Toolbox.com). 
+                All rights reserved. All product names are trademarks of their respective companies.
+                Toolbox.com is not
+                affiliated with or endorsed by any company listed at this site.
+
+
+			</p>
+			
+			<p class="sponsors"> PCMag Digital Group 
+                <!-- adchoices -->
+                <a target="_blank" href="http://preferences-mgr.truste.com/?type=ziffdavispop&amp;pid=ziffdavis01&amp;aid=ziffdavis01">AdChoices <img style ="vertical-align:middle" src="//cdn.ziffstatic.com/adchoices/adchoices.png" border="0"></a>
+
+                <script type="text/javascript" language="javascript">
+
+                    //Call out to Akamai and lookup the country
+                    var NOTICE_ID;
+                    var callback = { 'done': false };
+                    var chin;
+                    var domain = document.location.host;
+
+                    var s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    s.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'c.betrad.com/geo/c.js';
+                    s.async = false;
+
+                    s.onreadystatechange = s.onload = function () {
+                        var state = s.readyState;
+
+                        if (!callback.done && (!state || /loaded|complete/.test(state))) {
+                            callback.done = true;
+                            if (domain == 'www.pcmag.com') {
+                                chin = { 'at': 4079, 'be': 4080, 'bg': 4081, 'ca': 4048, 'ch': 4106, 'cy': 4083, 'cz': 4084, 'de': 4089, 'dk': 4085, 'ee': 4086, 'es': 4104, 'fi': 4087, 'fr': 4088, 'gb': 4107, 'gr': 4090, 'hr': 4082, 'hu': 4091, 'ie': 4092, 'it': 4093, 'lt': 4095, 'lu': 4096, 'lv': 4094, 'mt': 4097, 'nl': 4098, 'pl': 4099, 'pt': 4100, 'ro': 4101, 'se': 4105, 'si': 4103, 'sk': 4102, 'us': 4047 };
+                            } else if (domain == 'www.askmen.com') {
+                                chin = { 'at': 4108, 'be': 4109, 'bg': 4110, 'ca': 4050, 'ch': 4135, 'cy': 4112, 'cz': 4113, 'de': 4118, 'dk': 4114, 'ee': 4115, 'es': 4133, 'fi': 4116, 'fr': 4117, 'gb': 4136, 'gr': 4119, 'hr': 4111, 'hu': 4120, 'ie': 4121, 'it': 4122, 'lt': 4124, 'lu': 4125, 'lv': 4123, 'mt': 4126, 'nl': 4127, 'pl': 4128, 'pt': 4129, 'ro': 4130, 'se': 4134, 'si': 4132, 'sk': 4131, 'us': 4049 };
+                            } else if (domain == 'www.computershopper.com') {
+                                chin = { 'at': 4137, 'be': 4138, 'bg': 4139, 'ca': 4052, 'ch': 4164, 'cy': 4141, 'cz': 4142, 'de': 4147, 'dk': 4143, 'ee': 4144, 'es': 4162, 'fi': 4145, 'fr': 4146, 'gb': 4165, 'gr': 4148, 'hr': 4140, 'hu': 4149, 'ie': 4150, 'it': 4151, 'lt': 4153, 'lu': 4154, 'lv': 4152, 'mt': 4155, 'nl': 4156, 'pl': 4157, 'pt': 4158, 'ro': 4159, 'se': 4163, 'si': 4161, 'sk': 4160, 'us': 4051 };
+                            } else if (domain == 'www.extremetech.com') {
+                                chin = { 'at': 4166, 'be': 4167, 'bg': 4168, 'ca': 4054, 'ch': 4193, 'cy': 4170, 'cz': 4171, 'de': 4176, 'dk': 4172, 'ee': 4173, 'es': 4191, 'fi': 4174, 'fr': 4175, 'gb': 4194, 'gr': 4177, 'hr': 4169, 'hu': 4178, 'ie': 4179, 'it': 4180, 'lt': 4182, 'lu': 4183, 'lv': 4181, 'mt': 4184, 'nl': 4185, 'pl': 4186, 'pt': 4187, 'ro': 4188, 'se': 4192, 'si': 4190, 'sk': 4189, 'us': 4053 };
+                            } else if (domain == 'www.geek.com') {
+                                chin = { 'at': 4195, 'be': 4196, 'bg': 4197, 'ca': 4056, 'ch': 4222, 'cy': 4199, 'cz': 4200, 'de': 4205, 'dk': 4201, 'ee': 4202, 'es': 4220, 'fi': 4203, 'fr': 4204, 'gb': 4223, 'gr': 4206, 'hr': 4198, 'hu': 4207, 'ie': 4208, 'it': 4209, 'lt': 4211, 'lu': 4212, 'lv': 4210, 'mt': 4213, 'nl': 4214, 'pl': 4215, 'pt': 4216, 'ro': 4217, 'se': 4221, 'si': 4219, 'sk': 4218, 'us': 4055 };
+                            } else if (domain == 'www.ign.com') {
+                                chin = { 'at': 4224, 'be': 4225, 'bg': 4226, 'ca': 4058, 'ch': 4251, 'cy': 4228, 'cz': 4229, 'de': 4234, 'dk': 4230, 'ee': 4231, 'es': 4249, 'fi': 4232, 'fr': 4233, 'gb': 4252, 'gr': 4235, 'hr': 4227, 'hu': 4236, 'ie': 4237, 'it': 4238, 'lt': 4240, 'lu': 4241, 'lv': 4239, 'mt': 4242, 'nl': 4243, 'pl': 4244, 'pt': 4245, 'ro': 4246, 'se': 4250, 'si': 4248, 'sk': 4247, 'us': 4057 };
+                            } else if (domain == 'www.insidecrm.com') {
+                                chin = { 'at': 4253, 'be': 4254, 'bg': 4255, 'ca': 4060, 'ch': 4280, 'cy': 4257, 'cz': 4258, 'de': 4263, 'dk': 4259, 'ee': 4260, 'es': 4278, 'fi': 4261, 'fr': 4262, 'gb': 4281, 'gr': 4264, 'hr': 4256, 'hu': 4265, 'ie': 4266, 'it': 4267, 'lt': 4269, 'lu': 4270, 'lv': 4268, 'mt': 4271, 'nl': 4272, 'pl': 4273, 'pt': 4274, 'ro': 4275, 'se': 4279, 'si': 4277, 'sk': 4276, 'us': 4059 };
+                            } else if (domain == 'it.toolbox.com') {
+                                chin = { 'at': 4282, 'be': 4283, 'bg': 4284, 'ca': 4062, 'ch': 4309, 'cy': 4286, 'cz': 4287, 'de': 4292, 'dk': 4288, 'ee': 4289, 'es': 4307, 'fi': 4290, 'fr': 4291, 'gb': 4310, 'gr': 4293, 'hr': 4285, 'hu': 4294, 'ie': 4295, 'it': 4296, 'lt': 4298, 'lu': 4299, 'lv': 4297, 'mt': 4300, 'nl': 4301, 'pl': 4302, 'pt': 4303, 'ro': 4304, 'se': 4308, 'si': 4306, 'sk': 4305, 'us': 4061 };
+                            } else if (domain == 'www.itmanagement.com') {
+                                chin = { 'at': 4311, 'be': 4312, 'bg': 4313, 'ca': 4064, 'ch': 4338, 'cy': 4315, 'cz': 4316, 'de': 4321, 'dk': 4317, 'ee': 4318, 'es': 4336, 'fi': 4319, 'fr': 4320, 'gb': 4339, 'gr': 4322, 'hr': 4314, 'hu': 4323, 'ie': 4324, 'it': 4325, 'lt': 4327, 'lu': 4328, 'lv': 4326, 'mt': 4329, 'nl': 4330, 'pl': 4331, 'pt': 4332, 'ro': 4333, 'se': 4337, 'si': 4335, 'sk': 4334, 'us': 4063 };
+                            } else if (domain == 'www.itsecurity.com') {
+                                chin = { 'at': 4340, 'be': 4341, 'bg': 4342, 'ca': 4066, 'ch': 4367, 'cy': 4344, 'cz': 4345, 'de': 4350, 'dk': 4346, 'ee': 4347, 'es': 4365, 'fi': 4348, 'fr': 4349, 'gb': 4368, 'gr': 4351, 'hr': 4343, 'hu': 4352, 'ie': 4353, 'it': 4354, 'lt': 4356, 'lu': 4357, 'lv': 4355, 'mt': 4358, 'nl': 4359, 'pl': 4360, 'pt': 4361, 'ro': 4362, 'se': 4366, 'si': 4364, 'sk': 4363, 'us': 4065 };
+                            } else if (domain == 'www.logicbuy.com') {
+                                chin = { 'at': 4369, 'be': 4370, 'bg': 4371, 'ca': 4068, 'ch': 4396, 'cy': 4373, 'cz': 4374, 'de': 4379, 'dk': 4375, 'ee': 4376, 'es': 4394, 'fi': 4377, 'fr': 4378, 'gb': 4397, 'gr': 4380, 'hr': 4372, 'hu': 4381, 'ie': 4382, 'it': 4383, 'lt': 4385, 'lu': 4386, 'lv': 4384, 'mt': 4387, 'nl': 4388, 'pl': 4389, 'pt': 4390, 'ro': 4391, 'se': 4395, 'si': 4393, 'sk': 4392, 'us': 4067 };
+                            } else if (domain == 'www.pcmag.com') {
+                                chin = { 'at': 4398, 'be': 4399, 'bg': 4400, 'ca': 4070, 'ch': 4425, 'cy': 4402, 'cz': 4403, 'de': 4408, 'dk': 4404, 'ee': 4405, 'es': 4423, 'fi': 4406, 'fr': 4407, 'gb': 4426, 'gr': 4409, 'hr': 4401, 'hu': 4410, 'ie': 4411, 'it': 4412, 'lt': 4414, 'lu': 4415, 'lv': 4413, 'mt': 4416, 'nl': 4417, 'pl': 4418, 'pt': 4419, 'ro': 4420, 'se': 4424, 'si': 4422, 'sk': 4421, 'us': 4069 };
+                            } else if (domain == 'www.techbargains.com') {
+                                chin = { 'at': 4427, 'be': 4428, 'bg': 4429, 'ca': 4072, 'ch': 4454, 'cy': 4431, 'cz': 4432, 'de': 4437, 'dk': 4433, 'ee': 4434, 'es': 4452, 'fi': 4435, 'fr': 4436, 'gb': 4455, 'gr': 4438, 'hr': 4430, 'hu': 4439, 'ie': 4440, 'it': 4441, 'lt': 4443, 'lu': 4444, 'lv': 4442, 'mt': 4445, 'nl': 4446, 'pl': 4447, 'pt': 4448, 'ro': 4449, 'se': 4453, 'si': 4451, 'sk': 4450, 'us': 4071 };
+                            } else if (domain == 'www.voip-news.com') {
+                                chin = { 'at': 4456, 'be': 4457, 'bg': 4458, 'ca': 4074, 'ch': 4483, 'cy': 4460, 'cz': 4461, 'de': 4466, 'dk': 4462, 'ee': 4463, 'es': 4481, 'fi': 4464, 'fr': 4465, 'gb': 4484, 'gr': 4467, 'hr': 4459, 'hu': 4468, 'ie': 4469, 'it': 4470, 'lt': 4472, 'lu': 4473, 'lv': 4471, 'mt': 4474, 'nl': 4475, 'pl': 4476, 'pt': 4477, 'ro': 4478, 'se': 4482, 'si': 4480, 'sk': 4479, 'us': 4073 };
+                            } else if (domain == 'www.webhostingunleashed.com') {
+                                chin = { 'at': 4485, 'be': 4486, 'bg': 4487, 'ca': 4076, 'ch': 4512, 'cy': 4489, 'cz': 4490, 'de': 4495, 'dk': 4491, 'ee': 4492, 'es': 4510, 'fi': 4493, 'fr': 4494, 'gb': 4513, 'gr': 4496, 'hr': 4488, 'hu': 4497, 'ie': 4498, 'it': 4499, 'lt': 4501, 'lu': 4502, 'lv': 4500, 'mt': 4503, 'nl': 4504, 'pl': 4505, 'pt': 4506, 'ro': 4507, 'se': 4511, 'si': 4509, 'sk': 4508, 'us': 4075 };
+                            } else if (domain == 'ziffdavistech.com') {
+                                chin = { 'at': 4514, 'be': 4515, 'bg': 4516, 'ca': 4078, 'ch': 4541, 'cy': 4518, 'cz': 4519, 'de': 4524, 'dk': 4520, 'ee': 4521, 'es': 4539, 'fi': 4522, 'fr': 4523, 'gb': 4542, 'gr': 4525, 'hr': 4517, 'hu': 4526, 'ie': 4527, 'it': 4528, 'lt': 4530, 'lu': 4531, 'lv': 4529, 'mt': 4532, 'nl': 4533, 'pl': 4534, 'pt': 4535, 'ro': 4536, 'se': 4540, 'si': 4538, 'sk': 4537, 'us': 4077 };
+                            } else if (domain == 'www.ziffdavis.com') {
+                                chin = { 'at': 2757, 'be': 2758, 'bg': 2759, 'ca': 2718, 'ch': 2792, 'cy': 4544, 'cz': 2760, 'de': 2764, 'dk': 4545, 'ee': 2761, 'es': 2790, 'fi': 2762, 'fr': 2763, 'gb': 2753, 'gr': 2765, 'hr': 4543, 'hu': 2766, 'ie': 2767, 'it': 2778, 'lt': 2780, 'lu': 2781, 'lv': 2779, 'nl': 2782, 'no': 2783, 'pl': 2785, 'pt': 2786, 'ro': 2787, 'se': 2791, 'si': 2789, 'sk': 2788, 'us': 2752 };
+                            } else {
+                                chin = { 'at': 2757, 'be': 2758, 'bg': 2759, 'ca': 2718, 'ch': 2792, 'cy': 4544, 'cz': 2760, 'de': 2764, 'dk': 4545, 'ee': 2761, 'es': 2790, 'fi': 2762, 'fr': 2763, 'gb': 2753, 'gr': 2765, 'hr': 4543, 'hu': 2766, 'ie': 2767, 'it': 2778, 'lt': 2780, 'lu': 2781, 'lv': 2779, 'nl': 2782, 'no': 2783, 'pl': 2785, 'pt': 2786, 'ro': 2787, 'se': 2791, 'si': 2789, 'sk': 2788, 'us': 2752 };
+                            }
+                            if ((chin[window._bap_p_country]) || false) {
+                                if (window._bap_p_country == 'us') {
+                                    showInPage(chin[window._bap_p_country]);
+                                } else {
+                                    showHoverImplied(chin[window._bap_p_country]);
+                                }
+                            }
+                        }
+                    };
+
+                    // use body if available. more safe in IE
+                    (document.body || head).appendChild(s);
+
+
+                    function showInPage(NOTICE_ID) {
+                        document.getElementById("_bapw-link").style.display = 'inline';
+                        (function () {
+                            var e = document, b, a = (e.location.protocol == "https:" ? "https" : "http"), c = (a == "https" ? "https://info.evidon.com/c/betrad/pub/" : "http://cdn.betrad.com/pub/");
+                            e.getElementById("_bapw-icon").src = c + "icon1.png";
+                            e.getElementById("_bapw-link").onclick = function () {
+                                var f = this;
+                                function d(i, l) {
+                                    var j = e.getElementsByTagName("head")[0] || e.documentElement, h = false, g = e.createElement("script");
+                                    function k() {
+                                        g.onload = g.onreadystatechange = null;
+                                        j.removeChild(g);
+                                        l()
+                                    }
+                                    g.src = i;
+                                    g.onreadystatechange = function () {
+                                        if (!h && (this.readyState == "loaded" || this.readyState == "complete")) {
+                                            h = true;
+                                            k()
+                                        }
+                                    };
+                                    g.onload = k;
+                                    j.insertBefore(g, j.firstChild)
+                                }
+                                this.onclick = "return false";
+                                d(a + "://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js", function () {
+                                    d(c + "pub1.js", function () {
+                                        BAPW.i(f, { pid: NOTICE_ID, ocid: 660 }, false)
+                                    })
+                                });
+                                return false
+                            };
+                            b = e.createElement("img");
+                            b.src = a + "://l.betrad.com/pub/p.gif?pid=" + NOTICE_ID + "&ocid=660&ii=1&r=" + Math.random();
+                            b.height = "1";
+                            b.width = "1";
+                            e.body.appendChild(b);
+                        })();
+                    }
+
+
+                    function showHoverImplied(NOTICE_ID) {
+                        document.getElementById("_bapw-link").style.display = 'inline';
+                        (function () {
+                            var ev = document.createElement('script');
+                            ev.type = 'text/javascript';
+                            ev.async = true;
+                            ev.setAttribute('data-ev-tag-pid', NOTICE_ID);
+                            ev.setAttribute('data-ev-tag-ocid', 660);
+                            ev.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'c.betrad.com/pub/tag.js';
+                            var s = document.getElementsByTagName('script')[0];
+                            s.parentNode.insertBefore(ev, s);
+                        })();
+
+                        (function () {
+                            var hn = document.createElement('script');
+                            hn.type = 'text/javascript';
+                            hn.async = true;
+                            hn.setAttribute('data-ev-hover-pid', NOTICE_ID);
+                            hn.setAttribute('data-ev-hover-ocid', 660);
+                            hn.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'c.betrad.com/geo/h1.js';
+                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hn, s);
+                        })();
+                    }
+
+
+</script>
+ <div> <a href="//privacy.truste.com/privacy-seal/validation?rid=f216ea74-e272-46f4-b2a1-0db430ecb6b4" title="TRUSTe Privacy Certification" target="_blank"><img style="border: none" src="//privacy-policy.truste.com/privacy-seal/seal?rid=ee2b8a8e-ac56-482f-bd8b-10bfc823aba2" alt="TRUSTe Privacy Certification"/></a> </div>
+                           </p>    
+         
+	        
+		</footer>
+
+
+
+
+
+
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAlEXTtVddKC3cy0QCq6iHmvftfoMJHLQggphUp0BKFcz/l1F7rYeg3oTLaV1iuUWbjbcQ5QRJA/pACfysA42Zia6Cq/hHq6uGUwOWxLGxA7LjHoK+CaGj4kS0kyEGBMMO3bdBbNr29y3XgnP2vG1yuDcp1+J54mlzi+hR4SNPWNxJzg5vdCuvil/V8QHpXazT31vgF3SRLAg+orhZ19y5O/fktrTQ==" />
+</div><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTY4MDc0ODUzMQ9kFgJmD2QWCGYPZBYGAgsPFgIeBFRleHQFjAcgIDxzY3JpcHQgc3JjPSJodHRwOi8vY2RuLnN0YXRpYy56ZGJiLm5ldC9qcy96ZC1lbWFpbC5qcyI+PC9zY3JpcHQ+DQoNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPCEtLSBTdGFydCBCb3VuY2VYIHRhZy4gRGVwbG95IGF0IHRoZSBiZWdpbm5pbmcgb2YgZG9jdW1lbnQgaGVhZC4gLS0+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c2NyaXB0Pg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIChmdW5jdGlvbiAoZCkgew0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB2YXIgZSA9IGQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGUuc3JjID0gZC5sb2NhdGlvbi5wcm90b2NvbCArICcvL2JvdW5jZWV4Y2hhbmdlLmNvbS90YWcvMTMzNi9pLmpzJzsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZS5hc3luYyA9IHRydWU7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoImhlYWQiKVswXS5hcHBlbmRDaGlsZChlKTsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB9IChkb2N1bWVudCkpOw0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zY3JpcHQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8IS0tIEVuZCBCb3VuY2VYIFRhZy0tPmQCDA8WAh8ABYUFPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIGlkPSJ6ZHRibHdkanMiIHNyYz0iLy9jZG4uemlmZnN0YXRpYy5jb20vanN0L3RibHdkX2IuanMiIGFzeW5jPSJhc3luYyI+PC9zY3JpcHQ+DQo8c2NyaXB0IHR5cGU9ICJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLy9jZG4uemlmZnN0YXRpYy5jb20vanMvemRkbXAvMS4xL3pkZG1wLm1pbi5qcyI+IDwvc2NyaXB0Pg0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLy9zdGF0aWMuemlmZmRhdmlzLmNvbS9qc3QvemRzdGlja3kuanMiIGFzeW5jPSJhc3luYyI+PC9zY3JpcHQ+DQo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSIvL2Nkbi56aWZmc3RhdGljLmNvbS9qc3QvemR2dG9vbHMubWluLmpzIj48L3NjcmlwdD4gIA0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLy9jZG4uemlmZnN0YXRpYy5jb20vanMvemRyZWZyZXNoZXIvMS4zLjIvemRyZWZyZXNoZXIubWluLmpzIj48L3NjcmlwdD4gIA0KPHNjcmlwdCBhc3luYz0iYXN5bmMiIGRhdGEtY2xpZW50LWlkPSJrcHdiQk9GZVZSbkVWRkIiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSIvL2QzdWppZHM2OHA2eG1xLmNsb3VkZnJvbnQubmV0L2Fidy5qcyI+PC9zY3JpcHQ+ZAINDxYCHwAFmAUgPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPg0KICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRBY2NvdW50JywgJ1VBLTQ1MTM3ODQ4LTEnXSk7DQogIF9nYXEucHVzaChbJ19zZXREb21haW5OYW1lJywgJ3Rvb2xib3guY29tJ10pOw0KICBfZ2FxLnB1c2goWydfc2V0Q3VzdG9tVmFyJywgMSwnQ29tbXVuaXR5JywnVG9vbGJveCBmb3IgSVQnLDNdKTsNCiAgX2dhcS5wdXNoKFsnX3NldEN1c3RvbVZhcicsIDIsJ1N1YkNvbW11bml0eScsJ0lUJywzXSk7DQogIF9nYXEucHVzaChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAgICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsgZ2EudHlwZSA9ICd0ZXh0L2phdmFzY3JpcHQnOyBnYS5hc3luYyA9IHRydWU7DQogICAgZ2Euc3JjID0gKCdodHRwczonID09IGRvY3VtZW50LmxvY2F0aW9uLnByb3RvY29sID8gJ2h0dHBzOi8vc3NsJyA6DQoJCSdodHRwOi8vd3d3JykgKyAnLmdvb2dsZS1hbmFseXRpY3MuY29tL2dhLmpzJzsNCiAgICB2YXIgcyA9IGRvY3VtZW50LmdldEVsZW1lbnRzQnlUYWdOYW1lKCdzY3JpcHQnKVswXTsNCgkJcy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQogPC9zY3JpcHQ+ZAIDEGRkFgxmDxYCHgVjbGFzcwUNaGVhZGVyLW5vcm1hbBYCAgEPDxYCHgdWaXNpYmxlaGRkAgIPZBYcAgEPZBYCAgEPDxYCHgtOYXZpZ2F0ZVVybAUraHR0cDovL2l0LnRvb2xib3guY29tL2hvbWUvcmVjb3Zlci1wYXNzd29yZGRkAgIPFgIeC18hSXRlbUNvdW50Ah0WOgIBD2QWAmYPFQMCMTcVQnVzaW5lc3MgSW50ZWxsaWdlbmNlAGQCAg9kFgJmDxUDAjE5C0MgTGFuZ3VhZ2VzAGQCAw9kFgJmDxUDAjc4D0Nsb3VkIENvbXB1dGluZwBkAgQPZBYCZg8VAwI3NRlDb21tdW5pY2F0aW9ucyBUZWNobm9sb2d5AGQCBQ9kFgJmDxUDATEDQ1JNAGQCBg9kFgJmDxUDAjc2C0RhdGEgQ2VudGVyAGQCBw9kFgJmDxUDAjE1DkRhdGEgV2FyZWhvdXNlAGQCCA9kFgJmDxUDAjI1CERhdGFiYXNlAGQCCQ9kFgJmDxUDAjI4HkVtZXJnaW5nIFRlY2hub2xvZ3kgYW5kIFRyZW5kcwBkAgoPZBYCZg8VAwEyH0VudGVycHJpc2UgQXJjaGl0ZWN0dXJlIGFuZCBFQUmUATwvZGl2PjxkaXYgY2xhc3M9J2R5bmFoZWFkZXItcGFuZWx2ZXJ0cnVsZScgc3R5bGU9J2hlaWdodDoyNzBweDsgbWFyZ2luLXRvcDowcHg7ICc+PC9kaXY+PGRpdiBjbGFzcz0nZHluYWhlYWRlci1kaXNwYW5lbCcgc3R5bGU9J3BhZGRpbmctbGVmdDoxNXB4Jz5kAgsPZBYCZg8VAwE0A0VSUABkAgwPZBYCZg8VAwIzMQhIYXJkd2FyZQBkAg0PZBYCZg8VAwIzMhpJVCBNYW5hZ2VtZW50IGFuZCBTdHJhdGVneQBkAg4PZBYCZg8VAwIxOARKYXZhAGQCDw9kFgJmDxUDAjEzFEtub3dsZWRnZSBNYW5hZ2VtZW50AGQCEA9kFgJmDxUDAjEyBUxpbnV4AGQCEQ9kFgJmDxUDAjEwCk5ldHdvcmtpbmcAZAISD2QWAmYPFQMBOQZPcmFjbGUAZAITD2QWAmYPFQMBOApQZW9wbGVTb2Z0AGQCFA9kFgJmDxUDAjI5IFByb2plY3QgYW5kIFBvcnRmb2xpbyBNYW5hZ2VtZW50lAE8L2Rpdj48ZGl2IGNsYXNzPSdkeW5haGVhZGVyLXBhbmVsdmVydHJ1bGUnIHN0eWxlPSdoZWlnaHQ6MjcwcHg7IG1hcmdpbi10b3A6MHB4OyAnPjwvZGl2PjxkaXYgY2xhc3M9J2R5bmFoZWFkZXItZGlzcGFuZWwnIHN0eWxlPSdwYWRkaW5nLWxlZnQ6MTVweCc+ZAIVD2QWAmYPFQMBNgNTQVAAZAIWD2QWAmYPFQMBNwNTQ00AZAIXD2QWAmYPFQMCMjQIU2VjdXJpdHkAZAIYD2QWAmYPFQMCMjMGU2llYmVsAGQCGQ9kFgJmDxUDAjIyB1N0b3JhZ2UAZAIaD2QWAmYPFQMCMTQEVU5JWABkAhsPZBYCZg8VAwIyMQxWaXN1YWwgQmFzaWMAZAIcD2QWAmYPFQMCMTEaV2ViIERlc2lnbiBhbmQgRGV2ZWxvcG1lbnQAZAIdD2QWAmYPFQMCMjYHV2luZG93cwBkAgMPFgIfAAWGTzxkaXYgY2xhc3M9Im1lbWJlclNsaWRlIj48ZGl2IGNsYXNzPSJtZW1iZXIiPjxkaXYgY2xhc3M9ImZsb2F0bGVmdCI+PGltZyBzcmM9J2h0dHBzOi8vdXNlcmltYWdlcy5pdHRvb2xib3guY29tL3VzZXIvNi81Lzcvc18yMTkyNzU2LmpwZycgY2xhc3M9InBvc3QtcGljIj48L2Rpdj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiIHN0eWxlPSJwYWRkaW5nLWxlZnQ6MTBweCI+PGEgaHJlZj0naHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9wYXVsX3BlZGFudC8nIGNsYXNzPSJkeW5haGVhZGVyLWRpcnRvcGljcyBtZW1iZXJMaW5rYm94Ij5QYXVsX1BlZGFudCA8L2E+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0ibWVtYmVyU2xpZGUiPjxkaXYgY2xhc3M9Im1lbWJlciI+PGRpdiBjbGFzcz0iZmxvYXRsZWZ0Ij48aW1nIHNyYz0naHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdXNlci81LzUvMS9zXzEzNjgxNTUuanBnJyBjbGFzcz0icG9zdC1waWMiPjwvZGl2PjxkaXYgY2xhc3M9ImZsb2F0bGVmdCIgc3R5bGU9InBhZGRpbmctbGVmdDoxMHB4Ij48YSBocmVmPSdodHRwOi8vaXQudG9vbGJveC5jb20vcGVvcGxlL2RhY3JlZS8nIGNsYXNzPSJkeW5haGVhZGVyLWRpcnRvcGljcyBtZW1iZXJMaW5rYm94Ij5EQUNSRUUgPC9hPjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9Im1lbWJlclNsaWRlIj48ZGl2IGNsYXNzPSJtZW1iZXIiPjxkaXYgY2xhc3M9ImZsb2F0bGVmdCI+PGltZyBzcmM9J2h0dHBzOi8vdXNlcmltYWdlcy5pdHRvb2xib3guY29tL3VzZXIvNC8yLzkvc18yNTEwOTI0LmpwZycgY2xhc3M9InBvc3QtcGljIj48L2Rpdj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiIHN0eWxlPSJwYWRkaW5nLWxlZnQ6MTBweCI+PGEgaHJlZj0naHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9tYXJrZGV2cmllcy8nIGNsYXNzPSJkeW5haGVhZGVyLWRpcnRvcGljcyBtZW1iZXJMaW5rYm94Ij5NYXJrRGVWcmllcyA8L2E+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0ibWVtYmVyU2xpZGUiPjxkaXYgY2xhc3M9Im1lbWJlciI+PGRpdiBjbGFzcz0iZmxvYXRsZWZ0Ij48aW1nIHNyYz0naHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdXNlci8yLzYvMS9zXzQwMzgxNjIuanBnJyBjbGFzcz0icG9zdC1waWMiPjwvZGl2PjxkaXYgY2xhc3M9ImZsb2F0bGVmdCIgc3R5bGU9InBhZGRpbmctbGVmdDoxMHB4Ij48YSBocmVmPSdodHRwOi8vaXQudG9vbGJveC5jb20vcGVvcGxlL3ZvaXBfbmV3cy8nIGNsYXNzPSJkeW5haGVhZGVyLWRpcnRvcGljcyBtZW1iZXJMaW5rYm94Ij5Wb0lQX05ld3MgPC9hPjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9Im1lbWJlclNsaWRlIj48ZGl2IGNsYXNzPSJtZW1iZXIiPjxkaXYgY2xhc3M9ImZsb2F0bGVmdCI+PGltZyBzcmM9J2h0dHBzOi8vdXNlcmltYWdlcy5pdHRvb2xib3guY29tL3VzZXIvMi82Lzcvc18zMzcwNzYyLmpwZycgY2xhc3M9InBvc3QtcGljIj48L2Rpdj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiIHN0eWxlPSJwYWRkaW5nLWxlZnQ6MTBweCI+PGEgaHJlZj0naHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9pbnNpZGVjcm0vJyBjbGFzcz0iZHluYWhlYWRlci1kaXJ0b3BpY3MgbWVtYmVyTGlua2JveCI+SW5zaWRlLUNSTSA8L2E+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0ibWVtYmVyU2xpZGUiPjxkaXYgY2xhc3M9Im1lbWJlciI+PGRpdiBjbGFzcz0iZmxvYXRsZWZ0Ij48aW1nIHNyYz0naHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdXNlci8wLzQvMS9zXzM5MzE0MC5qcGcnIGNsYXNzPSJwb3N0LXBpYyI+PC9kaXY+PGRpdiBjbGFzcz0iZmxvYXRsZWZ0IiBzdHlsZT0icGFkZGluZy1sZWZ0OjEwcHgiPjxhIGhyZWY9J2h0dHA6Ly9pdC50b29sYm94LmNvbS9wZW9wbGUvY2hyaXNkYXlwaW5reWx0ZC8nIGNsYXNzPSJkeW5haGVhZGVyLWRpcnRvcGljcyBtZW1iZXJMaW5rYm94Ij5DaHJpc19EYXkgPC9hPjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9Im1lbWJlclNsaWRlIj48ZGl2IGNsYXNzPSJtZW1iZXIiPjxkaXYgY2xhc3M9ImZsb2F0bGVmdCI+PGltZyBzcmM9J2h0dHBzOi8vdXNlcmltYWdlcy5pdHRvb2xib3guY29tL3VzZXIvMi82LzEvc180MjcxMTYyLmpwZycgY2xhc3M9InBvc3QtcGljIj48L2Rpdj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiIHN0eWxlPSJwYWRkaW5nLWxlZnQ6MTBweCI+PGEgaHJlZj0naHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9tYWNwcm90eC8nIGNsYXNzPSJkeW5haGVhZGVyLWRpcnRvcGljcyBtZW1iZXJMaW5rYm94Ij5NYWNQcm9UWCA8L2E+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0ibWVtYmVyU2xpZGUiPjxkaXYgY2xhc3M9Im1lbWJlciI+PGRpdiBjbGFzcz0iZmxvYXRsZWZ0Ij48aW1nIHNyYz0naHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdXNlci8zLzIvMS9zXzIyNTMxMjMuanBnJyBjbGFzcz0icG9zdC1waWMiPjwvZGl2PjxkaXYgY2xhc3M9ImZsb2F0bGVmdCIgc3R5bGU9InBhZGRpbmctbGVmdDoxMHB4Ij48YSBocmVmPSdodHRwOi8vaXQudG9vbGJveC5jb20vcGVvcGxlL2lfYW1fdGhlX2RyYWdvbi8nIGNsYXNzPSJkeW5haGVhZGVyLWRpcnRvcGljcyBtZW1iZXJMaW5rYm94Ij5JX2FtX3RoZV9kcmFnb24gPC9hPjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9Im1lbWJlclNsaWRlIj48ZGl2IGNsYXNzPSJtZW1iZXIiPjxkaXYgY2xhc3M9ImZsb2F0bGVmdCI+PGltZyBzcmM9J2h0dHBzOi8vdXNlcmltYWdlcy5pdHRvb2xib3guY29tL3VzZXIvMC8xLzIvc180MTUyMjEwLmpwZycgY2xhc3M9InBvc3QtcGljIj48L2Rpdj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiIHN0eWxlPSJwYWRkaW5nLWxlZnQ6MTBweCI+PGEgaHJlZj0naHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9pbnNpZGVfZXJwLycgY2xhc3M9ImR5bmFoZWFkZXItZGlydG9waWNzIG1lbWJlckxpbmtib3giPkluc2lkZS1FUlAgPC9hPjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9Im1lbWJlclNsaWRlIj48ZGl2IGNsYXNzPSJtZW1iZXIiPjxkaXYgY2xhc3M9ImZsb2F0bGVmdCI+PGltZyBzcmM9J2h0dHBzOi8vdXNlcmltYWdlcy5pdHRvb2xib3guY29tL3VzZXIvMy8wLzMvc18xMTI0MzAzLmpwZycgY2xhc3M9InBvc3QtcGljIj48L2Rpdj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiIHN0eWxlPSJwYWRkaW5nLWxlZnQ6MTBweCI+PGEgaHJlZj0naHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9taWtlbWovJyBjbGFzcz0iZHluYWhlYWRlci1kaXJ0b3BpY3MgbWVtYmVyTGlua2JveCI+TWljaGFlbCBNZXllcnMtSm91YW4gPC9hPjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9Im1lbWJlclNsaWRlIj48ZGl2IGNsYXNzPSJtZW1iZXIiPjxkaXYgY2xhc3M9ImZsb2F0bGVmdCI+PGltZyBzcmM9J2h0dHBzOi8vdXNlcmltYWdlcy5pdHRvb2xib3guY29tL3VzZXIvMS8zLzQvc182Mzg0MzEuanBnJyBjbGFzcz0icG9zdC1waWMiPjwvZGl2PjxkaXYgY2xhc3M9ImZsb2F0bGVmdCIgc3R5bGU9InBhZGRpbmctbGVmdDoxMHB4Ij48YSBocmVmPSdodHRwOi8vaXQudG9vbGJveC5jb20vcGVvcGxlL3RlcnJ5Y3VycmFuOTk5LycgY2xhc3M9ImR5bmFoZWFkZXItZGlydG9waWNzIG1lbWJlckxpbmtib3giPlRlcnJ5Q3VycmFuIDwvYT48L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJtZW1iZXJTbGlkZSI+PGRpdiBjbGFzcz0ibWVtYmVyIj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiPjxpbWcgc3JjPSdodHRwczovL3VzZXJpbWFnZXMuaXR0b29sYm94LmNvbS91c2VyLzMvOS8wL3NfNTMxOTA5My5qcGcnIGNsYXNzPSJwb3N0LXBpYyI+PC9kaXY+PGRpdiBjbGFzcz0iZmxvYXRsZWZ0IiBzdHlsZT0icGFkZGluZy1sZWZ0OjEwcHgiPjxhIGhyZWY9J2h0dHA6Ly9pdC50b29sYm94LmNvbS9wZW9wbGUvbWF4d2VsbGFybm9sZC8nIGNsYXNzPSJkeW5haGVhZGVyLWRpcnRvcGljcyBtZW1iZXJMaW5rYm94Ij5tYXh3ZWxsYXJub2xkIDwvYT48L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJtZW1iZXJTbGlkZSI+PGRpdiBjbGFzcz0ibWVtYmVyIj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiPjxpbWcgc3JjPSdodHRwczovL3VzZXJpbWFnZXMuaXR0b29sYm94LmNvbS91c2VyLzYvMy85L3NfNzk5OTM2LmpwZycgY2xhc3M9InBvc3QtcGljIj48L2Rpdj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiIHN0eWxlPSJwYWRkaW5nLWxlZnQ6MTBweCI+PGEgaHJlZj0naHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9sb2N1dHVzLycgY2xhc3M9ImR5bmFoZWFkZXItZGlydG9waWNzIG1lbWJlckxpbmtib3giPkxvY3V0dXMgPC9hPjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9Im1lbWJlclNsaWRlIj48ZGl2IGNsYXNzPSJtZW1iZXIiPjxkaXYgY2xhc3M9ImZsb2F0bGVmdCI+PGltZyBzcmM9J2h0dHBzOi8vdXNlcmltYWdlcy5pdHRvb2xib3guY29tL3VzZXIvNi8xLzAvc18xMTM1MDE2LmpwZycgY2xhc3M9InBvc3QtcGljIj48L2Rpdj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiIHN0eWxlPSJwYWRkaW5nLWxlZnQ6MTBweCI+PGEgaHJlZj0naHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9hbmRyZXdfc19iYWtlci8nIGNsYXNzPSJkeW5haGVhZGVyLWRpcnRvcGljcyBtZW1iZXJMaW5rYm94Ij5BbmRyZXcuUy5CYWtlciA8L2E+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0ibWVtYmVyU2xpZGUiPjxkaXYgY2xhc3M9Im1lbWJlciI+PGRpdiBjbGFzcz0iZmxvYXRsZWZ0Ij48aW1nIHNyYz0naHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdXNlci83LzkvMi9zXzQ1MDI5Ny5qcGcnIGNsYXNzPSJwb3N0LXBpYyI+PC9kaXY+PGRpdiBjbGFzcz0iZmxvYXRsZWZ0IiBzdHlsZT0icGFkZGluZy1sZWZ0OjEwcHgiPjxhIGhyZWY9J2h0dHA6Ly9pdC50b29sYm94LmNvbS9wZW9wbGUvY3JhaWd3Yi8nIGNsYXNzPSJkeW5haGVhZGVyLWRpcnRvcGljcyBtZW1iZXJMaW5rYm94Ij5DcmFpZyBCb3J5c293aWNoIDwvYT48L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJtZW1iZXJTbGlkZSI+PGRpdiBjbGFzcz0ibWVtYmVyIj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiPjxpbWcgc3JjPSdodHRwczovL3VzZXJpbWFnZXMuaXR0b29sYm94LmNvbS91c2VyLzMvOC8zL3NfMjkzODMuanBnJyBjbGFzcz0icG9zdC1waWMiPjwvZGl2PjxkaXYgY2xhc3M9ImZsb2F0bGVmdCIgc3R5bGU9InBhZGRpbmctbGVmdDoxMHB4Ij48YSBocmVmPSdodHRwOi8vaXQudG9vbGJveC5jb20vcGVvcGxlL2dhbm90ZWRwLycgY2xhc3M9ImR5bmFoZWFkZXItZGlydG9waWNzIG1lbWJlckxpbmtib3giPkR1a2VHYW5vdGUgPC9hPjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9Im1lbWJlclNsaWRlIj48ZGl2IGNsYXNzPSJtZW1iZXIiPjxkaXYgY2xhc3M9ImZsb2F0bGVmdCI+PGltZyBzcmM9J2h0dHBzOi8vdXNlcmltYWdlcy5pdHRvb2xib3guY29tL3VzZXIvOC8yLzAvc18xMTkxMDI4LmpwZycgY2xhc3M9InBvc3QtcGljIj48L2Rpdj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiIHN0eWxlPSJwYWRkaW5nLWxlZnQ6MTBweCI+PGEgaHJlZj0naHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9kZW5uaXNzdGV2ZW5zb24vJyBjbGFzcz0iZHluYWhlYWRlci1kaXJ0b3BpY3MgbWVtYmVyTGlua2JveCI+RGVubmlzIFN0ZXZlbnNvbiA8L2E+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0ibWVtYmVyU2xpZGUiPjxkaXYgY2xhc3M9Im1lbWJlciI+PGRpdiBjbGFzcz0iZmxvYXRsZWZ0Ij48aW1nIHNyYz0naHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdXNlci82LzMvMS9zXzUyOTMxMzYuanBnJyBjbGFzcz0icG9zdC1waWMiPjwvZGl2PjxkaXYgY2xhc3M9ImZsb2F0bGVmdCIgc3R5bGU9InBhZGRpbmctbGVmdDoxMHB4Ij48YSBocmVmPSdodHRwOi8vaXQudG9vbGJveC5jb20vcGVvcGxlL2hvZ2FyZHkvJyBjbGFzcz0iZHluYWhlYWRlci1kaXJ0b3BpY3MgbWVtYmVyTGlua2JveCI+SG9nYXJkeSA8L2E+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0ibWVtYmVyU2xpZGUiPjxkaXYgY2xhc3M9Im1lbWJlciI+PGRpdiBjbGFzcz0iZmxvYXRsZWZ0Ij48aW1nIHNyYz0naHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdXNlci81LzQvNi9zXzIyMzA2NDUuanBnJyBjbGFzcz0icG9zdC1waWMiPjwvZGl2PjxkaXYgY2xhc3M9ImZsb2F0bGVmdCIgc3R5bGU9InBhZGRpbmctbGVmdDoxMHB4Ij48YSBocmVmPSdodHRwOi8vaXQudG9vbGJveC5jb20vcGVvcGxlL3JhbW5hdGhfYXdhdGUvJyBjbGFzcz0iZHluYWhlYWRlci1kaXJ0b3BpY3MgbWVtYmVyTGlua2JveCI+UmFtbmF0aC5Bd2F0ZSA8L2E+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0ibWVtYmVyU2xpZGUiPjxkaXYgY2xhc3M9Im1lbWJlciI+PGRpdiBjbGFzcz0iZmxvYXRsZWZ0Ij48aW1nIHNyYz0naHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdXNlci8xLzYvNi9zXzEwMTY2MS5qcGcnIGNsYXNzPSJwb3N0LXBpYyI+PC9kaXY+PGRpdiBjbGFzcz0iZmxvYXRsZWZ0IiBzdHlsZT0icGFkZGluZy1sZWZ0OjEwcHgiPjxhIGhyZWY9J2h0dHA6Ly9pdC50b29sYm94LmNvbS9wZW9wbGUvYWZyaWNhbm9yYWNsZS8nIGNsYXNzPSJkeW5haGVhZGVyLWRpcnRvcGljcyBtZW1iZXJMaW5rYm94Ij5DbGludG9uIEpvbmVzIDwvYT48L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJtZW1iZXJTbGlkZSI+PGRpdiBjbGFzcz0ibWVtYmVyIj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiPjxpbWcgc3JjPSdodHRwczovL3VzZXJpbWFnZXMuaXR0b29sYm94LmNvbS91c2VyLzMvMC84L3NfMjAzMjgwMy5qcGcnIGNsYXNzPSJwb3N0LXBpYyI+PC9kaXY+PGRpdiBjbGFzcz0iZmxvYXRsZWZ0IiBzdHlsZT0icGFkZGluZy1sZWZ0OjEwcHgiPjxhIGhyZWY9J2h0dHA6Ly9pdC50b29sYm94LmNvbS9wZW9wbGUvY2FzdGVydHJveS8nIGNsYXNzPSJkeW5haGVhZGVyLWRpcnRvcGljcyBtZW1iZXJMaW5rYm94Ij5BYmhhaVRyaXBhdGhpIDwvYT48L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJtZW1iZXJTbGlkZSI+PGRpdiBjbGFzcz0ibWVtYmVyIj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiPjxpbWcgc3JjPSdodHRwczovL3VzZXJpbWFnZXMuaXR0b29sYm94LmNvbS91c2VyLzcvNC82L3NfMzk1NjQ3LmpwZycgY2xhc3M9InBvc3QtcGljIj48L2Rpdj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiIHN0eWxlPSJwYWRkaW5nLWxlZnQ6MTBweCI+PGEgaHJlZj0naHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9ibHJ2ZW5rYXQvJyBjbGFzcz0iZHluYWhlYWRlci1kaXJ0b3BpY3MgbWVtYmVyTGlua2JveCI+YmxydmVua2F0IDwvYT48L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJtZW1iZXJTbGlkZSI+PGRpdiBjbGFzcz0ibWVtYmVyIj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiPjxpbWcgc3JjPSdodHRwczovL3VzZXJpbWFnZXMuaXR0b29sYm94LmNvbS91c2VyLzEvNC80L3NfNjE4NDQxLmpwZycgY2xhc3M9InBvc3QtcGljIj48L2Rpdj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiIHN0eWxlPSJwYWRkaW5nLWxlZnQ6MTBweCI+PGEgaHJlZj0naHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9pcWJhbHlrLycgY2xhc3M9ImR5bmFoZWFkZXItZGlydG9waWNzIG1lbWJlckxpbmtib3giPklxYmFseWsgPC9hPjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9Im1lbWJlclNsaWRlIj48ZGl2IGNsYXNzPSJtZW1iZXIiPjxkaXYgY2xhc3M9ImZsb2F0bGVmdCI+PGltZyBzcmM9J2h0dHBzOi8vdXNlcmltYWdlcy5pdHRvb2xib3guY29tL3VzZXIvMi83LzIvc18xNDQxMjcyLmpwZycgY2xhc3M9InBvc3QtcGljIj48L2Rpdj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiIHN0eWxlPSJwYWRkaW5nLWxlZnQ6MTBweCI+PGEgaHJlZj0naHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9sb2NrbHlvbi8nIGNsYXNzPSJkeW5haGVhZGVyLWRpcnRvcGljcyBtZW1iZXJMaW5rYm94Ij5Mb2NrTHlvbiA8L2E+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0ibWVtYmVyU2xpZGUiPjxkaXYgY2xhc3M9Im1lbWJlciI+PGRpdiBjbGFzcz0iZmxvYXRsZWZ0Ij48aW1nIHNyYz0naHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdXNlci80LzAvMC9zXzQwMzEwMDQuanBnJyBjbGFzcz0icG9zdC1waWMiPjwvZGl2PjxkaXYgY2xhc3M9ImZsb2F0bGVmdCIgc3R5bGU9InBhZGRpbmctbGVmdDoxMHB4Ij48YSBocmVmPSdodHRwOi8vaXQudG9vbGJveC5jb20vcGVvcGxlL2l0LW1hbmFnZW1lbnQvJyBjbGFzcz0iZHluYWhlYWRlci1kaXJ0b3BpY3MgbWVtYmVyTGlua2JveCI+SVQtTWFuYWdlbWVudCA8L2E+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0ibWVtYmVyU2xpZGUiPjxkaXYgY2xhc3M9Im1lbWJlciI+PGRpdiBjbGFzcz0iZmxvYXRsZWZ0Ij48aW1nIHNyYz0naHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdXNlci8zLzgvMC9zXzM4MTA4My5qcGcnIGNsYXNzPSJwb3N0LXBpYyI+PC9kaXY+PGRpdiBjbGFzcz0iZmxvYXRsZWZ0IiBzdHlsZT0icGFkZGluZy1sZWZ0OjEwcHgiPjxhIGhyZWY9J2h0dHA6Ly9pdC50b29sYm94LmNvbS9wZW9wbGUvdGFsaWVzaW51ay8nIGNsYXNzPSJkeW5haGVhZGVyLWRpcnRvcGljcyBtZW1iZXJMaW5rYm94Ij5SaWNoYXJkQ2hhbiA8L2E+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0ibWVtYmVyU2xpZGUiPjxkaXYgY2xhc3M9Im1lbWJlciI+PGRpdiBjbGFzcz0iZmxvYXRsZWZ0Ij48aW1nIHNyYz0naHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdXNlci8xLzUvMC9zXzE4NTEwNTEuanBnJyBjbGFzcz0icG9zdC1waWMiPjwvZGl2PjxkaXYgY2xhc3M9ImZsb2F0bGVmdCIgc3R5bGU9InBhZGRpbmctbGVmdDoxMHB4Ij48YSBocmVmPSdodHRwOi8vaXQudG9vbGJveC5jb20vcGVvcGxlL2l1ZGl0aG0vJyBjbGFzcz0iZHluYWhlYWRlci1kaXJ0b3BpY3MgbWVtYmVyTGlua2JveCI+aXVkaXRobSA8L2E+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0ibWVtYmVyU2xpZGUiPjxkaXYgY2xhc3M9Im1lbWJlciI+PGRpdiBjbGFzcz0iZmxvYXRsZWZ0Ij48aW1nIHNyYz0naHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdXNlci83LzQvMC9zXzEwNDIwNDcuanBnJyBjbGFzcz0icG9zdC1waWMiPjwvZGl2PjxkaXYgY2xhc3M9ImZsb2F0bGVmdCIgc3R5bGU9InBhZGRpbmctbGVmdDoxMHB4Ij48YSBocmVmPSdodHRwOi8vaXQudG9vbGJveC5jb20vcGVvcGxlL2Fkcmlhbl9ncmlnb3JpdS8nIGNsYXNzPSJkeW5haGVhZGVyLWRpcnRvcGljcyBtZW1iZXJMaW5rYm94Ij5BZHJpYW5fR3JpZ29yaXUgPC9hPjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9Im1lbWJlclNsaWRlIj48ZGl2IGNsYXNzPSJtZW1iZXIiPjxkaXYgY2xhc3M9ImZsb2F0bGVmdCI+PGltZyBzcmM9J2h0dHBzOi8vdXNlcmltYWdlcy5pdHRvb2xib3guY29tL3VzZXIvNy8zLzYvc18xMDU3NjM3LmpwZycgY2xhc3M9InBvc3QtcGljIj48L2Rpdj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiIHN0eWxlPSJwYWRkaW5nLWxlZnQ6MTBweCI+PGEgaHJlZj0naHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9tbGluZHF1aXN0LycgY2xhc3M9ImR5bmFoZWFkZXItZGlydG9waWNzIG1lbWJlckxpbmtib3giPm1saW5kcXVpc3QgPC9hPjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9Im1lbWJlclNsaWRlIj48ZGl2IGNsYXNzPSJtZW1iZXIiPjxkaXYgY2xhc3M9ImZsb2F0bGVmdCI+PGltZyBzcmM9J2h0dHBzOi8vdXNlcmltYWdlcy5pdHRvb2xib3guY29tL3VzZXIvNi8zLzkvc182NDk4OTM2LmpwZycgY2xhc3M9InBvc3QtcGljIj48L2Rpdj48ZGl2IGNsYXNzPSJmbG9hdGxlZnQiIHN0eWxlPSJwYWRkaW5nLWxlZnQ6MTBweCI+PGEgaHJlZj0naHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9jb2drbm93c2FtaS8nIGNsYXNzPSJkeW5haGVhZGVyLWRpcnRvcGljcyBtZW1iZXJMaW5rYm94Ij5rbm93c2NvZ25vc2RvaSA8L2E+PC9kaXY+PC9kaXY+PC9kaXY+ZAIEDxYCHwQCBBYIZg9kFgICAQ8PFgIfAmdkFgJmDw8WAh8DBSdodHRwOi8vaXQudG9vbGJveC5jb20vY29tcGFuaWVzL3dlYnJvb3RkFgJmDxYEHwEFFnVzZXJpbWFnZS1kZWZhdWx0YmFkZ2UeCmxhenlzb3VyY2UFO2h0dHBzOi8vdXNlcmltYWdlcy5pdHRvb2xib3guY29tL3ZlbmRvci81LzcvNS9iXzI3MDY1NzUuanBnZAIBD2QWAgIBDw8WAh8CZ2QWAmYPDxYCHwMFJGh0dHA6Ly9pdC50b29sYm94LmNvbS9jb21wYW5pZXMvb2t0YWQWAmYPFgQfAQUWdXNlcmltYWdlLWRlZmF1bHRiYWRnZR8FBTtodHRwczovL3VzZXJpbWFnZXMuaXR0b29sYm94LmNvbS92ZW5kb3IvMS8xLzgvYl8yNjk5ODExLmpwZ2QCAg9kFgICAQ8PFgIfAmdkFgJmDw8WAh8DBSxodHRwOi8vaXQudG9vbGJveC5jb20vY29tcGFuaWVzL01hbmFnZUVuZ2luZWQWAmYPFgQfAQUWdXNlcmltYWdlLWRlZmF1bHRiYWRnZR8FBTtodHRwczovL3VzZXJpbWFnZXMuaXR0b29sYm94LmNvbS92ZW5kb3IvOS8xLzgvYl8yMjgwODE5LmpwZ2QCAw9kFgICAQ8PFgIfAmdkFgJmDw8WAh8DBSdodHRwOi8vaXQudG9vbGJveC5jb20vY29tcGFuaWVzL2ltYXRpb25kFgJmDxYEHwEFFnVzZXJpbWFnZS1kZWZhdWx0YmFkZ2UfBQU7aHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdmVuZG9yLzQvMC84L2JfMjY5OTgwNC5qcGdkAgUPZBYCZg9kFgJmDxYCHwEFFXVzZXJpbWFnZS1kZWZhdWx0dGlueWQCBg8PFgQfAwUbaHR0cDovL2l0LnRvb2xib3guY29tL2hvbWUvHwAFBEhvbWVkZAIHDw8WBB8DBSNodHRwOi8vaXQudG9vbGJveC5jb20vaG9tZS9tZXNzYWdlcx8ABQVJbmJveGRkAgkPDxYEHwMFImh0dHA6Ly9pdC50b29sYm94LmNvbS9ob21lL3Byb2ZpbGUfAAUHUHJvZmlsZWRkAgoPDxYEHwMFI2h0dHA6Ly9pdC50b29sYm94LmNvbS9ob21lL3Bvc3RzL215HwAFBVBvc3RzZGQCCw8PFgQfAwUnaHR0cDovL2l0LnRvb2xib3guY29tL2hvbWUvYWNoaWV2ZW1lbnRzHwAFDEFjaGlldmVtZW50c2RkAgwPDxYEHwMFLWh0dHA6Ly9pdC50b29sYm94LmNvbS9ob21lL2Nvbm5lY3Rpb24tbWFuYWdlch8ABQtDb25uZWN0aW9uc2RkAg0PDxYEHwMFI2h0dHA6Ly9pdC50b29sYm94LmNvbS9ob21lL3NldHRpbmdzHwAFCFNldHRpbmdzZGQCDg8PFgQfAwUiaHR0cDovL2l0LnRvb2xib3guY29tL2hvbWUvc2lnbm91dB8ABQZMb2dvdXRkZAIQDxYCHgRocmVmBS9odHRwOi8vaXQudG9vbGJveC5jb20vYmxvZ3Mvc3RhcnQtbmV3LWJsb2cuYXNweGQCAw8WAh8CaGQCBw9kFgQCAQ9kFgZmD2QWBmYPZBYCAgMPFgIfAQUQc3BhY2VyLWl0dHliaXR0eWQCAg8PFgQfAAUOVG9vbGJveCBmb3IgSVQfAmhkZAIEDxYEHglpbm5lcmh0bWwFDlRvb2xib3ggZm9yIElUHwJnZAIBDxYCHwQCHRY6AgEPZBYCZg8VAyJidXNpbmVzc2ludGVsbGlnZW5jZS5pdHRvb2xib3guY29tFUJ1c2luZXNzIEludGVsbGlnZW5jZQBkAgIPZBYCZg8VAw9jLml0dG9vbGJveC5jb20LQyBMYW5ndWFnZXMAZAIDD2QWAmYPFQMTY2xvdWQuaXR0b29sYm94LmNvbQ9DbG91ZCBDb21wdXRpbmcAZAIED2QWAmYPFQMXdGVsZXBob255Lml0dG9vbGJveC5jb20ZQ29tbXVuaWNhdGlvbnMgVGVjaG5vbG9neQBkAgUPZBYCZg8VAxFjcm0uaXR0b29sYm94LmNvbQNDUk0AZAIGD2QWAmYPFQMYZGF0YWNlbnRlci5pdHRvb2xib3guY29tC0RhdGEgQ2VudGVyAGQCBw9kFgJmDxUDG2RhdGF3YXJlaG91c2UuaXR0b29sYm94LmNvbQ5EYXRhIFdhcmVob3VzZQBkAggPZBYCZg8VAxZkYXRhYmFzZS5pdHRvb2xib3guY29tCERhdGFiYXNlAGQCCQ9kFgJmDxUDGmVtZXJnaW5ndGVjaC5pdHRvb2xib3guY29tHkVtZXJnaW5nIFRlY2hub2xvZ3kgYW5kIFRyZW5kcwBkAgoPZBYCZg8VAxFlYWkuaXR0b29sYm94LmNvbR9FbnRlcnByaXNlIEFyY2hpdGVjdHVyZSBhbmQgRUFJAGQCCw9kFgJmDxUDEWVycC5pdHRvb2xib3guY29tA0VSUABkAgwPZBYCZg8VAxZoYXJkd2FyZS5pdHRvb2xib3guY29tCEhhcmR3YXJlAGQCDQ9kFgJmDxUDEWNpby5pdHRvb2xib3guY29tGklUIE1hbmFnZW1lbnQgYW5kIFN0cmF0ZWd5AGQCDg9kFgJmDxUDEmphdmEuaXR0b29sYm94LmNvbQRKYXZhKzwvZGl2PjxkaXYgc3R5bGU9J2Zsb2F0OmxlZnQ7IHdpZHRoOjIyMHB4Jz5kAg8PZBYCZg8VAyFrbm93bGVkZ2VtYW5hZ2VtZW50Lml0dG9vbGJveC5jb20US25vd2xlZGdlIE1hbmFnZW1lbnQAZAIQD2QWAmYPFQMTbGludXguaXR0b29sYm94LmNvbQVMaW51eABkAhEPZBYCZg8VAxhuZXR3b3JraW5nLml0dG9vbGJveC5jb20KTmV0d29ya2luZwBkAhIPZBYCZg8VAxRvcmFjbGUuaXR0b29sYm94LmNvbQZPcmFjbGUAZAITD2QWAmYPFQMYcGVvcGxlc29mdC5pdHRvb2xib3guY29tClBlb3BsZVNvZnQAZAIUD2QWAmYPFQMfcHJvamVjdG1hbmFnZW1lbnQuaXR0b29sYm94LmNvbSBQcm9qZWN0IGFuZCBQb3J0Zm9saW8gTWFuYWdlbWVudABkAhUPZBYCZg8VAxFzYXAuaXR0b29sYm94LmNvbQNTQVAAZAIWD2QWAmYPFQMZc3VwcGx5Y2hhaW4uaXR0b29sYm94LmNvbQNTQ00AZAIXD2QWAmYPFQMWc2VjdXJpdHkuaXR0b29sYm94LmNvbQhTZWN1cml0eQBkAhgPZBYCZg8VAxRzaWViZWwuaXR0b29sYm94LmNvbQZTaWViZWwAZAIZD2QWAmYPFQMVc3RvcmFnZS5pdHRvb2xib3guY29tB1N0b3JhZ2UAZAIaD2QWAmYPFQMSdW5peC5pdHRvb2xib3guY29tBFVOSVgAZAIbD2QWAmYPFQMZdmlzdWFsYmFzaWMuaXR0b29sYm94LmNvbQxWaXN1YWwgQmFzaWMAZAIcD2QWAmYPFQMXd2ViZGVzaWduLml0dG9vbGJveC5jb20aV2ViIERlc2lnbiBhbmQgRGV2ZWxvcG1lbnQAZAIdD2QWAmYPFQMVd2luZG93cy5pdHRvb2xib3guY29tB1dpbmRvd3MAZAICDw8WAh8CZ2QWAgIBDxYCHwQCFBYoZg9kFgRmDxUBAGQCAg8VAgAAZAIBD2QWBGYPFQEAZAICDxUCAABkAgIPZBYEZg8VAQBkAgIPFQIAAGQCAw9kFgRmDxUBAGQCAg8VAgAAZAIED2QWBGYPFQEAZAICDxUCAABkAgUPZBYEZg8VAQBkAgIPFQIAAGQCBg9kFgRmDxUBAGQCAg8VAgAAZAIHD2QWBGYPFQEAZAICDxUCAABkAggPZBYEZg8VAQBkAgIPFQIAAGQCCQ9kFgRmDxUBAGQCAg8VAgAAZAIKD2QWBGYPFQEAZAICDxUCAABkAgsPZBYEZg8VAQBkAgIPFQIAAGQCDA9kFgRmDxUBAGQCAg8VAgAAZAIND2QWBGYPFQEAZAICDxUCAABkAg4PZBYEZg8VAQBkAgIPFQIAAGQCDw9kFgRmDxUBAGQCAg8VAgAAZAIQD2QWBGYPFQEAZAICDxUCAABkAhEPZBYEZg8VAQBkAgIPFQIAAGQCEg9kFgRmDxUBAGQCAg8VAgAAZAITD2QWBGYPFQEAZAICDxUCAABkAgUPZBYCAgEPZBYCAgEPZBYCZg9kFgICAQ8WAh8ABQNvZmZkAggPZBYEAgEPDxYCHwJoZGQCAw9kFgYCAg9kFgJmD2QWAgICD2QWAgIBD2QWAgIDD2QWAgIBD2QWAgIDDw9kFgQeCXdhdGVybWFyawUSWW91ciBlbWFpbCBhZGRyZXNzHg1kZWZhdWx0QnV0dG9uBR9tX3JfSm9pbk5vdzJfQ1RBX2J0bkpvaW5fYnRuQ1RBZAIDD2QWBgIBDxYCHwJnFgICAQ9kFgJmD2QWAmYPFgIfAQUZdXNlcmltYWdlLWRlZmF1bHRNZWRpdW05MGQCAw8WAh8CZxYGAgEPDxYCHwJoZGQCAw8PFgQeCEltYWdlVXJsBVtodHRwczovL3VzZXJpbWFnZXMuaXR0b29sYm94LmNvbS9ibG9ncy8zMjgvNzUwNjkvbV85NDI4YmIxOC0yNmU3LTQ1ZDktYjM5Zi1hYmQwY2UxMTFkMmIuanBnHwJnZGQCBw8WAh8ABQ1CbG9nIHBvc3QgYnkgZAIFDxYCHwQCBBYIAgEPZBYEAgEPZBYCZg9kFgJmDxYIHwEFJHVzZXJpbWFnZS1kZWZhdWx0TWVkaXVtOTAgYmFkZ2VQb3B1cB8FBThodHRwczovL3VzZXJpbWFnZXMuaXR0b29sYm94LmNvbS91c2VyLzcvOS8yL21fNDUwMjk3LmpwZx4DYklEBQY0NTAyOTceDWJhZGdlRW50aXR5SUQFBjQ1MDI5N2QCBQ8WAh8ABQ1CbG9nIHBvc3QgYnkgZAICD2QWBAIBD2QWAmYPZBYCZg8WCB8BBSR1c2VyaW1hZ2UtZGVmYXVsdE1lZGl1bTkwIGJhZGdlUG9wdXAfBQU5aHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdXNlci8yLzYvNy9tXzMzNzA3NjIuanBnHwsFBzMzNzA3NjIfDAUHMzM3MDc2MmQCBQ8WAh8ABQ1CbG9nIHBvc3QgYnkgZAIDD2QWBAIBD2QWAmYPZBYCZg8WCB8BBSR1c2VyaW1hZ2UtZGVmYXVsdE1lZGl1bTkwIGJhZGdlUG9wdXAfBQU3aHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdXNlci8zLzgvMy9tXzI5MzgzLmpwZx8LBQUyOTM4Mx8MBQUyOTM4M2QCBQ8WAh8ABQ1CbG9nIHBvc3QgYnkgZAIED2QWBAIBD2QWAmYPZBYCZg8WCB8BBSR1c2VyaW1hZ2UtZGVmYXVsdE1lZGl1bTkwIGJhZGdlUG9wdXAfBQU4aHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdXNlci8xLzYvNi9tXzEwMTY2MS5qcGcfCwUGMTAxNjYxHwwFBjEwMTY2MWQCBQ8WAh8ABQ1CbG9nIHBvc3QgYnkgZAIED2QWAmYPZBYCAgIPZBYCAgEPZBYCAgMPPCsACQEADxYGHghEYXRhS2V5cxYAHwQCCB8CZ2QWEGYPZBYCAgEPZBYCZg8PFgIfAwUlaHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9ub3dyb296L2QWAmYPFgQfAQUWdXNlcmltYWdlLWRlZmF1bHRzbWFsbB8FBTlodHRwczovL3VzZXJpbWFnZXMuaXR0b29sYm94LmNvbS91c2VyLzEvNi83L3NfODk1Nzc2MS5qcGdkAgEPZBYCAgEPZBYCZg8PFgIfAwUraHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9kYXRhbWFudXNhbGxjL2QWAmYPFgQfAQUWdXNlcmltYWdlLWRlZmF1bHRzbWFsbB8FBTlodHRwczovL3VzZXJpbWFnZXMuaXR0b29sYm94LmNvbS91c2VyLzgvNi84L3NfODk1Njg2OC5qcGdkAgIPZBYCAgEPZBYCZg8PFgIfAwUlaHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS90b3Blb3RrL2QWAmYPFgQfAQUWdXNlcmltYWdlLWRlZmF1bHRzbWFsbB8FBTlodHRwczovL3VzZXJpbWFnZXMuaXR0b29sYm94LmNvbS91c2VyLzYvNy82L3NfODk1NjY3Ni5qcGdkAgMPZBYCAgEPZBYCZg8PFgIfAwUuaHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9jYXNleXN1cmdpY2FsYXJ0L2QWAmYPFgQfAQUWdXNlcmltYWdlLWRlZmF1bHRzbWFsbB8FBTlodHRwczovL3VzZXJpbWFnZXMuaXR0b29sYm94LmNvbS91c2VyLzQvMS80L3NfODk1NTQxNC5qcGdkAgQPZBYCAgEPZBYCZg8PFgIfAwUmaHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9jYXJ0b296by9kFgJmDxYEHwEFFnVzZXJpbWFnZS1kZWZhdWx0c21hbGwfBQU5aHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdXNlci8xLzEvOC9zXzg5NTI4MTEuanBnZAIFD2QWAgIBD2QWAmYPDxYCHwMFK2h0dHA6Ly9pdC50b29sYm94LmNvbS9wZW9wbGUvbGluZHNleXdhbGtlci9kFgJmDxYEHwEFFnVzZXJpbWFnZS1kZWZhdWx0c21hbGwfBQU5aHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdXNlci8zLzIvMC9zXzg5NDkwMjMuanBnZAIGD2QWAgIBD2QWAmYPDxYCHwMFLWh0dHA6Ly9pdC50b29sYm94LmNvbS9wZW9wbGUvc2ltcmluY2hvdWRocmllL2QWAmYPFgQfAQUWdXNlcmltYWdlLWRlZmF1bHRzbWFsbB8FBTlodHRwczovL3VzZXJpbWFnZXMuaXR0b29sYm94LmNvbS91c2VyLzgvNC8yL3NfODk0NzI0OC5qcGdkAgcPZBYCAgEPZBYCZg8PFgIfAwUpaHR0cDovL2l0LnRvb2xib3guY29tL3Blb3BsZS9hbWFuZGVlcDEyMy9kFgJmDxYEHwEFFnVzZXJpbWFnZS1kZWZhdWx0c21hbGwfBQU5aHR0cHM6Ly91c2VyaW1hZ2VzLml0dG9vbGJveC5jb20vdXNlci84LzAvNy9zXzg5Mzc3MDguanBnZAIKDw8WAh8CaGRkAgYPFgIfAAXxFzwhLS0gQmVnaW4gY29tU2NvcmUgVGFnIC0tPg0KPHNjcmlwdD4NCnZhciBfY29tc2NvcmUgPSBfY29tc2NvcmUgfHwgW107DQpfY29tc2NvcmUucHVzaCgNCnsgYzE6ICIyIiwgYzI6ICI2MDM2MjAyIiB9DQopOw0KKGZ1bmN0aW9uICgpDQp7IHZhciBzID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgic2NyaXB0IiksIGVsID0gZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoInNjcmlwdCIpWzBdOyBzLmFzeW5jID0gdHJ1ZTsgcy5zcmMgPSAoZG9jdW1lbnQubG9jYXRpb24ucHJvdG9jb2wgPT0gImh0dHBzOiIgPyAiaHR0cHM6Ly9zYiIgOiAiaHR0cDovL2IiKSArICIuc2NvcmVjYXJkcmVzZWFyY2guY29tL2JlYWNvbi5qcyI7IGVsLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKHMsIGVsKTsgfQ0KKSgpOw0KPC9zY3JpcHQ+DQo8bm9zY3JpcHQ+DQo8aW1nIHNyYz0iaHR0cDovL2Iuc2NvcmVjYXJkcmVzZWFyY2guY29tL3A/YzE9MiZjMj02MDM2MjAyJmN2PTIuMCZjaj0xIiAvPg0KPC9ub3NjcmlwdD4NCjwhLS0gRW5kIGNvbVNjb3JlIFRhZyAtLT4NCg0KPCEtLSBTVEFSVCBOaWVsc2VuIE9ubGluZSBTaXRlQ2Vuc3VzIFY2LjAgLS0+DQo8IS0tIENPUFlSSUdIVCAyMDEyIE5pZWxzZW4gT25saW5lIC0tPg0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPg0KKGZ1bmN0aW9uICgpIHsNCnZhciBkID0gbmV3IEltYWdlKDEsIDEpOw0KZC5vbmVycm9yID0gZC5vbmxvYWQgPSBmdW5jdGlvbiAoKQ0KeyBkLm9uZXJyb3IgPSBkLm9ubG9hZCA9IG51bGw7IH07DQpkLnNyYyA9IFsiLy9zZWN1cmUtdXMuaW1yd29ybGR3aWRlLmNvbS9jZ2ktYmluL20/Y2k9dXMtODA2MDMxaCZjZz0wJmNjPTEmc2k9IiwgZXNjYXBlKHdpbmRvdy5sb2NhdGlvbi5ocmVmKSwgIiZycD0iLCBlc2NhcGUoZG9jdW1lbnQucmVmZXJyZXIpLCAiJnRzPWNvbXBhY3Qmcm5kPSIsIChuZXcgRGF0ZSgpKS5nZXRUaW1lKCldLmpvaW4oJycpOw0KfSkoKTsNCjwvc2NyaXB0Pg0KPG5vc2NyaXB0Pg0KPGRpdj4NCjxpbWcgc3JjPSIvL3NlY3VyZS11cy5pbXJ3b3JsZHdpZGUuY29tL2NnaS1iaW4vbT9jaT11cy04MDYwMzFoJmNnPTAmY2M9MSZ0cz1ub3NjcmlwdCINCndpZHRoPSIxIiBoZWlnaHQ9IjEiIGFsdD0iIiAvPg0KPC9kaXY+DQo8L25vc2NyaXB0Pg0KPCEtLSBFTkQgTmllbHNlbiBPbmxpbmUgU2l0ZUNlbnN1cyBWNi4wIC0tPg0KPCEtLSBCZWdpbiBCbHVlS2FpIFRhZyAtLT4NCjxpZnJhbWUgbmFtZT0iX19ia2ZyYW1lIiBoZWlnaHQ9IjAiIHdpZHRoPSIwIiBmcmFtZWJvcmRlcj0iMCIgc3JjPSJqYXZhc2NyaXB0OnZvaWQoMCkiPjwvaWZyYW1lPg0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLy90YWdzLmJrcnR4LmNvbS9qcy9iay1jb3JldGFnLmpzIj48L3NjcmlwdD4NCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii8vY2RuLnN0YXRpYy56ZGJiLm5ldC9qcy9wYWdlLXNlZ21lbnRzLmpzIj48L3NjcmlwdD4NCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCihmdW5jdGlvbigpIHsNCgl6ZGJiLmd1cmdsZS5nZXRfc2VnbWVudHMoZG9jdW1lbnQubG9jYXRpb24sIGZ1bmN0aW9uKHNlZ21lbnRzKSB7DQoJCWZvciAodmFyIGkgPSAwOyBpIDwgc2VnbWVudHMubGVuZ3RoOyBpKyspIHsNCgkJCWJrX2FkZFBhZ2VDdHgoImJic2VnIiwgc2VnbWVudHNbaV0pOw0KCQl9DQogICAgICAgICAgICAgICBia19kb0pTVGFnKDIwMjAyLCAxMCk7DQoJfSk7DQp9KSAoKTsNCjwvc2NyaXB0PiANCjwhLS0gRW5kIEJsdWVLYWkgVGFnIC0tPg0KDQo8IS0tIEFkIGNoZWNrIHRhZy0tPg0KPGRpdiBpZD0iYWRzZW5zZSIgc3R5bGU9InZpc2liaWxpdHk6aGlkZGVuOyBwb3NpdGlvbjphYnNvbHV0ZTsiPnVudXNlZDwvZGl2Pg0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPg0KJChkb2N1bWVudCkucmVhZHkoZnVuY3Rpb24oKSB7DQogIGlmICgkKCIjYWRzZW5zZSIpLmhlaWdodCgpIDwgOCkgeyANCiAgICAvLyBmaXJlIEFkYmxvY2sgZ2EgZXZlbnQNCiAgICBpZiAod2luZG93Ll9nYXEpIHsgd2luZG93Ll9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0FkQmxvY2tlcicsJ0Jsb2NrZWQnXSk7IH0NCiAgICBpZiAod2luZG93LmdhKSB7IHdpbmRvdy5nYSgnc2VuZCcsICdldmVudCcsICdBZEJsb2NrZXInLCAnQmxvY2tlZCcpOyB9DQogIH0gZWxzZSB7DQogICAgaWYgKHdpbmRvdy5fZ2FxKSB7IHdpbmRvdy5fZ2FxLnB1c2goWydfdHJhY2tFdmVudCcsICdBZEJsb2NrZXInLCdOb3RCbG9ja2VkJ10pOyB9DQogICAgaWYgKHdpbmRvdy5nYSkgeyB3aW5kb3cuZ2EoJ3NlbmQnLCAnZXZlbnQnLCAnQWRCbG9ja2VyJywgJ05vdEJsb2NrZWQnKTsgfQ0KICAgIH0NCn0pOw0KPC9zY3JpcHQ+DQo8IS0tIEVuZCBBZCBjaGVjayB0YWcgLS0+DQo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSIvL3N0YXRpYy56aWZmcHJvZC5jb20vY3NlL2pzLzQuMi4wL3pkY3NlLm1pbi5qcz9vbmxvYWQ9WklGRl9DU0VDYWxsYmFjay5leGVjIj48L3NjcmlwdD4NCg0KPCEtLTxkaXYgaWQ9InNwbGluZSIgc3R5bGU9ImRpc3BsYXk6IGJsb2NrOyBtYXJnaW46IDBweCBhdXRvO3dpZHRoOiA3MjhweDtvdmVyZmxvdzogaGlkZGVuO3BhZGRpbmc6IDE1cHggMCAwIDA7Ij4NCiAgIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCiAgICB2YXIgYWR1bml0ID0gZ29vZ2xldGFnLnB1YmFkcygpLmRlZmluZVBhc3NiYWNrKA0KICAgICAgIi80NTg1L3pkLnRvb2xib3gvc3BsaW5lIiwgW1s3MjgsIDkwXV0NCiAgICApOw0KICAgIGFkdW5pdC5zZXRUYXJnZXRpbmcoInpjIixfX1pERE1QLk5ld0NvcnJlbGF0b3IoKSk7DQogICAgYWR1bml0LnNldFRhcmdldGluZygiemNwIixfX1pERE1QLlBhZ2VDb3JyZWxhdG9yKCkpOw0KICAgIGFkdW5pdC5zZXRUYXJnZXRpbmcoIk9PRiIsIGRvY3VtZW50Lmhhc0ZvY3VzKCkpOw0KICAgIGFkdW5pdC5zZXRUYXJnZXRpbmcoInJmciIsICJmYWxzZSIpOw0KICAgIGFkdW5pdC5kaXNwbGF5KCk7DQo8L3NjcmlwdD4NCjwvZGl2Pi0tPmQCBw8WAh8ABQg8IS0tIC0tPmQYFAUjbSRtJFJlY2VudEFjdGl2aXR5JHIkY3RsMDYkcmEkdGlsZXMPD2QCAWQFI20kbSRSZWNlbnRBY3Rpdml0eSRyJGN0bDAxJHJhJHRpbGVzDw9kAgFkBSNtJG0kUmVjZW50QWN0aXZpdHkkciRjdGwxOCRyYSR0aWxlcw8PZAICZAUjbSRtJFJlY2VudEFjdGl2aXR5JHIkY3RsMTAkcmEkdGlsZXMPD2QCAWQFI20kbSRSZWNlbnRBY3Rpdml0eSRyJGN0bDA4JHJhJHRpbGVzDw9kAgFkBSNtJG0kUmVjZW50QWN0aXZpdHkkciRjdGwwMCRyYSR0aWxlcw8PZAIBZAUjbSRtJFJlY2VudEFjdGl2aXR5JHIkY3RsMDMkcmEkdGlsZXMPD2QCAmQFI20kbSRSZWNlbnRBY3Rpdml0eSRyJGN0bDEzJHJhJHRpbGVzDw9kAgFkBSNtJG0kUmVjZW50QWN0aXZpdHkkciRjdGwwNSRyYSR0aWxlcw8PZAIBZAUjbSRtJFJlY2VudEFjdGl2aXR5JHIkY3RsMTUkcmEkdGlsZXMPD2QCAWQFI20kbSRSZWNlbnRBY3Rpdml0eSRyJGN0bDA5JHJhJHRpbGVzDw9kAgFkBSNtJG0kUmVjZW50QWN0aXZpdHkkciRjdGwxOSRyYSR0aWxlcw8PZAICZAUjbSRtJFJlY2VudEFjdGl2aXR5JHIkY3RsMTQkcmEkdGlsZXMPD2QCAWQFI20kbSRSZWNlbnRBY3Rpdml0eSRyJGN0bDEyJHJhJHRpbGVzDw9kAgFkBSNtJG0kUmVjZW50QWN0aXZpdHkkciRjdGwxNyRyYSR0aWxlcw8PZAIBZAUjbSRtJFJlY2VudEFjdGl2aXR5JHIkY3RsMDQkcmEkdGlsZXMPD2QCAWQFI20kbSRSZWNlbnRBY3Rpdml0eSRyJGN0bDAyJHJhJHRpbGVzDw9kAgFkBSNtJG0kUmVjZW50QWN0aXZpdHkkciRjdGwwNyRyYSR0aWxlcw8PZAIBZAUjbSRtJFJlY2VudEFjdGl2aXR5JHIkY3RsMTYkcmEkdGlsZXMPD2QCAWQFI20kbSRSZWNlbnRBY3Rpdml0eSRyJGN0bDExJHJhJHRpbGVzDw9kAgFkKYJlVvPfkmfAmTvW7Bbg7lPQlR0=" /></form>
+
+<script src="http://cdn.toolbox.com/build_2996/js/toolbox.common.js" language="javascript" type="text/javascript"></script> 
+<script type="text/javascript">
+    InitCodeHighlighting('http://cdn.toolbox.com/build_2996/', 'http://it.toolbox.com/');
+</script>
+
+<!-- popunder window -->
+
+<script type="text/javascript">
+    var popundercookie = getCookie("PopunderState");
+    if (popundercookie == "pagetwo") {
+        //Added Condition to check Popular-research page calling Master page - TND-5006
+        if (window.location.href.indexOf("api/popular-research") < 0) {
+            popunder = window.open("/api/popular-research/", "", "height=600, scrollbars=yes, width=970");
+            popunder.blur();
+            window.focus();
+        }
+    } 
+</script>
+
+<!-- begin zdbb -->
+<script type="text/javascript" src="//cdn.static.zdbb.net/js/z0WVjCBSEeGLoxIxOQVEwQ.min.js"></script>
+<noscript><img height="1" width="1" src="//zdbb.net/l/z0WVjCBSEeGLoxIxOQVEwQ/" alt="" /></noscript>
+<!-- end zdbb -->
+
+<script>$.get('/api/t/2/rt/?u=http%3a%2f%2fit.toolbox.com%2f&r=' + escape(document.referrer));</script>
+
+<!-- Start of Content Template Javascript include -->
+<!-- Begin comScore Tag -->
+<script>
+var _comscore = _comscore || [];
+_comscore.push(
+{ c1: "2", c2: "6036202" }
+);
+(function ()
+{ var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true; s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; el.parentNode.insertBefore(s, el); }
+)();
+</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&c2=6036202&cv=2.0&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+
+<!-- START Nielsen Online SiteCensus V6.0 -->
+<!-- COPYRIGHT 2012 Nielsen Online -->
+<script type="text/javascript">
+(function () {
+var d = new Image(1, 1);
+d.onerror = d.onload = function ()
+{ d.onerror = d.onload = null; };
+d.src = ["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-806031h&cg=0&cc=1&si=", escape(window.location.href), "&rp=", escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join('');
+})();
+</script>
+<noscript>
+<div>
+<img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-806031h&cg=0&cc=1&ts=noscript"
+width="1" height="1" alt="" />
+</div>
+</noscript>
+<!-- END Nielsen Online SiteCensus V6.0 -->
+<!-- Begin BlueKai Tag -->
+<iframe name="__bkframe" height="0" width="0" frameborder="0" src="javascript:void(0)"></iframe>
+<script type="text/javascript" src="//tags.bkrtx.com/js/bk-coretag.js"></script>
+<script type="text/javascript" src="//cdn.static.zdbb.net/js/page-segments.js"></script>
+<script type="text/javascript">
+(function() {
+	zdbb.gurgle.get_segments(document.location, function(segments) {
+		for (var i = 0; i < segments.length; i++) {
+			bk_addPageCtx("bbseg", segments[i]);
+		}
+               bk_doJSTag(20202, 10);
+	});
+}) ();
+</script> 
+<!-- End BlueKai Tag -->
+
+<!-- Ad check tag-->
+<div id="adsense" style="visibility:hidden; position:absolute;">unused</div>
+<script type="text/javascript">
+$(document).ready(function() {
+  if ($("#adsense").height() < 8) { 
+    // fire Adblock ga event
+    if (window._gaq) { window._gaq.push(['_trackEvent', 'AdBlocker','Blocked']); }
+    if (window.ga) { window.ga('send', 'event', 'AdBlocker', 'Blocked'); }
+  } else {
+    if (window._gaq) { window._gaq.push(['_trackEvent', 'AdBlocker','NotBlocked']); }
+    if (window.ga) { window.ga('send', 'event', 'AdBlocker', 'NotBlocked'); }
+    }
+});
+</script>
+<!-- End Ad check tag -->
+<script type="text/javascript" src="//static.ziffprod.com/cse/js/4.2.0/zdcse.min.js?onload=ZIFF_CSECallback.exec"></script>
+
+<!--<div id="spline" style="display: block; margin: 0px auto;width: 728px;overflow: hidden;padding: 15px 0 0 0;">
+   <script type="text/javascript">
+    var adunit = googletag.pubads().definePassback(
+      "/4585/zd.toolbox/spline", [[728, 90]]
+    );
+    adunit.setTargeting("zc",__ZDDMP.NewCorrelator());
+    adunit.setTargeting("zcp",__ZDDMP.PageCorrelator());
+    adunit.setTargeting("OOF", document.hasFocus());
+    adunit.setTargeting("rfr", "false");
+    adunit.display();
+</script>
+</div>-->
+<!-- -->
+<!-- End of Content Template Javascript include -->
+        </div>
+</body>
+</html>
+

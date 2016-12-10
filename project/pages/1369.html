@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+  <!-- Optimizely -->
+        <meta id="ign-optimizely" data-project-id="1369090036" />
+  <title>Sign in - IGN</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Sign in to IGN to connect with gamers and friends, update your blog, share your games collection and more" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="copyright" content="IGN Entertainment, Inc." />
+<link rel="canonical" href="http://s.ign.com/signin" />
+    <meta property="og:image" content="http://oystatic.ignimgs.com/src/core/img/widgets/global/page/ign-logo-100x100.jpg" />
+<meta property="og:site_name" content="IGN" />
+<meta property="fb:app_id" content="115982828429116" />
+<meta property="fb:pages" content="59685491632" />
+
+
+  <link href="https://oystatic.ignimgs.com/src/ignmedia/sites/s.ign.com/css/login.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="https://oystatic.ignimgs.com/src/ignmedia/sites/s.ign.com/css/signin/signin.css" media="screen" rel="stylesheet" type="text/css" /><script type="text/javascript" src="https://oystatic.ignimgs.com/src/core/js/external/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://oystatic.ignimgs.com/src/core/js/external/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://oystatic.ignimgs.com/src/core/js/external/jquery.timeago.js"></script>
+<script type="text/javascript" src="https://oystatic.ignimgs.com/src/core/js/external/es6Promise.js"></script>
+<script type="text/javascript" src="https://oystatic.ignimgs.com/src/core/js/lib/util.js"></script>
+<script type="text/javascript" src="https://oystatic.ignimgs.com/src/core/js/lib/util-image.js"></script>
+<script type="text/javascript" src="https://oystatic.ignimgs.com/src/core/js/postMessage.js"></script>
+<script type="text/javascript" src="https://oystatic.ignimgs.com/src/core/js/widgets/global/analytics/universal-analytics.js"></script>
+<script type="text/javascript" src="https://oystatic.ignimgs.com/src/core/js/widgets/global/analytics/drones.js"></script>
+<script type="text/javascript" src="https://oystatic.ignimgs.com/src/core/js/chesskit.js"></script>
+<script type="text/javascript" src="https://oystatic.ignimgs.com/src/core/js/widgets/shared/underscore.js"></script>
+<script type="text/javascript" src="https://oystatic.ignimgs.com/src/core/js/external/jquery/plugins/jquery.unveil.js"></script><script type="" src="https://oystatic.ignimgs.com/src/ignmedia/sites/s.ign.com/js/signin/signin.js"></script>
+<script type="" src="//oystatic.ignimgs.com/cache/js/d9/d5/d9d5aa6c5df62aa569010217feaa3016.js"></script>  <link rel="shortcut icon" type="image/x-icon" href="http://media.ignimgs.com/media/ign/favicon.ico"/>
+  <link rel="apple-touch-icon" type="image/png" href="http://media.ignimgs.com/media/ign/apple-touch-icon.png"/>
+  <link rel="alternate" type="application/rss+xml" title="IGN Gear RSS Feed" href="http://feeds.ign.com/ignfeeds/all/"/>
+  <script type="text/javascript">
+    var ignDocData = {
+      urlPrefix: '',
+      isModal: false    };
+  </script>
+  <script src="https://apis.google.com/js/api:client.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?hl=en" async defer></script>
+</head>
+<body>
+<div class="regHeader">
+    <div class="regHeaderContent">
+        <div class="ignLogo"></div>
+    </div>
+</div>
+<div class="ignsignin-mainContainer signin">
+    <div class="ignsignin-moveBox ignsignin-clear">
+    <div class="ignsignin-column ignsigin-social" >
+      <div class="ignsignin-header"><span>Sign in</span> socially</div>
+      <div class="ignsignin-social-icons">
+        <dd><a href="javascript:void(0);" class="signin-social signin-facebook" js-data="facebook"></a></dd>
+  <!--      <dd><a href="javascript:void(0);" class="signin-social signin-twitter" js-data="twitter"></a></dd>-->
+                <dd><a href="javascript:void(0);" class="signin-google" js-data="google" id="google-signin-btn"></a></dd>
+                <dd><a href="javascript:void(0);" class="signin-social signin-yahoo" js-data="yahoo"></a></dd>
+      </div>
+    </div>
+    <div class="ignsignin-column">
+      <div class="ignsignin-signin">
+        <div class="ignsignin-header"><span>Sign in through IGN</span></div>
+                <form id="signinForm" enctype="application/x-www-form-urlencoded" method="post" action="" js-data="signin">
+          <dl class="zend_form">
+            <dt id="email-label"><label for="email" class="required ignsignin-formLabel">Email or Username</label></dt>
+            <dd id="email-element">
+              <input type="text" name="email" id="email" value="" class="ignsignin-formInput" placeholder="" />
+              <span class="signin-borked signin-email"></span>
+            </dd>
+            <dd>
+              <div class="signin-error signin-email">An email or username is required</div>
+            </dd>
+
+            <dt id="password-label"><label for="password" class="required ignsignin-formLabel">Password</label></dt>
+            <dd id="password-element">
+              <input type="password" name="password" id="password" value="" class="ignsignin-formInput"  placeholder="" />
+              <span class="signin-borked signin-password"></span>
+            </dd>
+            <dd>
+              <div class="signin-error signin-password">A password is required</div>
+            </dd>
+
+                        <div class="g-recaptcha" data-sitekey="6Lf_r_4SAAAAAFRPm-FKlb4FfOI4mI0QvhMIRZ5W" style="transform:scale(0.79);-webkit-transform:scale(0.79);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+            
+            <input type="submit" value="Sign In" class="ignsignin-formButton" />
+          </dl>
+        </form>
+        <div class="ignsignin-forgotPassword">
+          <a href="javascript:void(0);" js-data="forgot" tabindex="0">Forgot your password?</a>
+        </div>
+          <div class="ignsignin-privacy" >
+            By signing in you agree to the <br/>
+            <a href="http://corp.ign.com/policies/user-agreement" target="_blank">IGN Terms of Use</a>
+            and have read and understood the <a href="http://corp.ign.com/policies/privacy" target="_blank">IGN Privacy Policy</a>.
+          </div>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="ignsignin-changeForm" >
+    Don't have an account? <a href="javascript:void(0);" js-data="register" style="text-transform: uppercase">Register<span class="ignsignin-arrow"></span></a>
+  </div>
+</div>
+<!-- BEGIN Google Analytics -->
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-23541058-1']);
+    _gaq.push(['_setDomainName', '.ign.com']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<!-- END Google Analytics --><script>
+    var igndrones = igndrones || {};
+    igndrones.async = igndrones.async || [];
+    igndrones.async.unshift(function() {
+        igndrones.init({"buyerbase":[],"chartbeat":{"uid":"21105","domain":"ign.com","sections":"Desktop Web,login"},"comscore":{"c2":"3000068"},"ga":{"uaView":"Desktop","account_number":"UA-23541058-1","_setDomainName":".ign.com","custom_vars":[[1,"pagetype","unmatched",3],[8,"template","undefined-desktop-01",3],[9,"ads-disabled","no",3],[15,"action","signin",3],[16,"controller","signin",3],[17,"module","SIgnCom",3],[18,"resource","login",3],[20,"is-community","no",3],[21,"signed-in","no",2],[22,"subscriber","no",1]]}});
+    igndrones.fireTop();    });
+</script>
+
+<script>
+
+    window.IGN_UA_DataLayer = window.IGN_UA_DataLayer || [];
+    
+            window.IGN_UA_DataLayer.push({"ga":{"page":{"platform":"Desktop Web","pageType":"unmatched","resource":"login","isCommunity":"no","adTemplate":"undefined-desktop-01","CPID":"6019c54a43a2333179077238b017cacf"},"user":{"signedIn":"no","primeSubscriber":"no","adsDisabled":false}}});
+    
+</script>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-54DV8X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','IGN_UA_DataLayer','GTM-54DV8X');</script>
+<!-- End Google Tag Manager -->
+
+<script src="https://apis.google.com/js/platform.js?onload=renderIgnGoogleLoginButton" async defer></script>
+</body>
+</html>
+
+<!-- View Generation: 100ms - 22.50MB - 65 - 2016-12-08 18:30:01 PST -->
