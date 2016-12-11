@@ -45,13 +45,16 @@ def pagerank(graph):
     answer = {}
     keys = graph.keys()
     n = len(keys)
+    # make adjacency matrix
     adj_matrix = adjacencymatrix(graph, keys)
     google_matrix = (1.0/float(n)) * numpy.matrix(numpy.ones((n,n)))
-    m = (0.85 * adj_matrix) + (0.15 * google_matrix)
+    m = (0.85 * adj_matrix) + (0.15 * google_matrix) #calculate matrix m
     v = (1.0 / n) * numpy.ones((n,1))
+    #multiply until the ranks are small enough
     while sum(abs(m * v - v)) > 0.001:
         v = (m * v)
     v = (m*v).tolist()
+    #save ranks to dictionary
     for i in range(n):
         answer[keys[i]] = v[i][0]
     return answer
